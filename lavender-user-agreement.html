@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Lavender 用户协议</title>
+  <style>
+    :root {
+      --bg: #0d0d19;
+      --surface: #181827;
+      --primary: #c59aff;
+      --primary-dim: #a855f7;
+      --on-bg: #e6e3f5;
+      --muted: #aba9ba;
+      --outline: #474755;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--on-bg);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+      padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 14px 20px;
+      background: rgba(24, 24, 39, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(71, 71, 85, 0.35);
+    }
+    header h1 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      margin-bottom: 14px;
+      border-radius: 8px;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(197, 154, 255, 0.12);
+      border: 1px solid rgba(197, 154, 255, 0.22);
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+    section { margin-bottom: 32px; }
+    .section-tag {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #757483;
+      margin-bottom: 6px;
+    }
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    p, li {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    ul, ol {
+      padding-left: 1.25em;
+      margin-bottom: 12px;
+    }
+    li { margin-bottom: 8px; }
+    strong { color: var(--on-bg); font-weight: 600; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(71, 71, 85, 0.45);
+      border-radius: 14px;
+      padding: 16px 18px;
+      margin: 14px 0;
+    }
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--on-bg);
+      margin-bottom: 8px;
+    }
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(71, 71, 85, 0.35);
+    }
+    .footer-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #757483;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>用户协议</h1>
+  </header>
+  <main>
+    <div class="badge">最后更新：2026 年 6 月 2 日</div>
+    <p class="lead">
+      欢迎使用 <strong>Lavender</strong>（以下简称「本应用」或「我们」）。本用户协议（以下简称「本协议」）是您与本应用运营方之间关于使用 Lavender 及相关服务所订立的法律协议。
+    </p>
+    <p class="lead">
+      请您仔细阅读本协议全部条款。下载、安装、注册、登录或使用本应用任一功能，即表示您已阅读、理解并同意受本协议约束。若您不同意本协议，请立即停止使用本应用。
+    </p>
+
+    <section>
+      <div class="section-tag">第 1 节</div>
+      <h2>协议范围与适用版本</h2>
+      <p>本协议适用于 Lavender 移动客户端用户界面与功能，包括但不限于：</p>
+      <ul>
+        <li>首页精选素材浏览、分类切换、详情预览与收藏；</li>
+        <li>发现页视频模板与配乐素材的浏览、试听、预览及下载；</li>
+        <li>金币充值、消费记录与账户相关服务；</li>
+        <li>我的收藏、意见反馈、反馈历史、设置及法律文档查阅；</li>
+        <li>推送通知、相册读写（经授权）及其他辅助功能。</li>
+      </ul>
+      <p>本协议与《隐私政策》共同构成您使用本应用的完整法律文件；二者冲突时，就个人信息处理事项以《隐私政策》为准。</p>
+    </section>
+
+    <section>
+      <div class="section-tag">第 2 节</div>
+      <h2>账户注册与安全</h2>
+      <ol>
+        <li>您可能需要通过本应用分配的账户标识（User ID）或我们支持的方式完成登录，以使用部分功能；</li>
+        <li>您应妥善保管账户信息及设备安全，对在该账户下发生的活动承担责任；</li>
+        <li>如发现账户被盗用或存在异常，请立即通过应用内反馈或邮件联系我们；</li>
+        <li>我们有权对存在风险的账户采取限制、冻结或注销等措施，以维护平台及用户安全。</li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="section-tag">第 3 节</div>
+      <h2>服务内容与使用规范</h2>
+      <p>您理解并同意：</p>
+      <ul>
+        <li>本应用提供的素材、模板、配乐等内容仅供个人学习、欣赏、创作参考及本应用允许范围内的使用；</li>
+        <li>发现页部分视频、音频及封面来自应用内置或本地资源目录，仅供应用内预览与授权下载，不得用于违法或侵权用途；</li>
+        <li>您收藏的模板信息主要保存在本地设备，更换设备或卸载应用可能导致收藏数据丢失，请及时了解备份与同步规则；</li>
+        <li>我们有权根据运营需要调整功能布局、素材分类、展示方式及服务内容，并将尽力通过合理方式提示重大变更。</li>
+      </ul>
+
+      <div class="card">
+        <div class="card-title">禁止行为</div>
+        <p>使用本应用时，您不得：</p>
+        <ul>
+          <li>违反法律法规、侵犯他人知识产权、隐私权或其他合法权益；</li>
+          <li>上传、传播违法、暴力、色情、诽谤、骚扰或其他不当内容；</li>
+          <li>对本应用进行反向工程、破解、爬取、批量下载或以其他方式干扰正常运行；</li>
+          <li>利用漏洞、外挂、自动化脚本非法获取金币、素材或干扰交易秩序；</li>
+          <li>将本应用用于任何商业性再分发或未经授权的公开传播。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-tag">第 4 节</div>
+      <h2>虚拟金币与充值</h2>
+      <ol>
+        <li>本应用内的<strong>金币</strong>为虚拟商品，仅可用于本应用内指定的功能与服务，不具有法定货币属性，不可兑换现金；</li>
+        <li>通过 <strong>Apple App Store 内购</strong> 完成充值，支付流程受 Apple 服务条款约束；</li>
+        <li>金币价格、套餐、赠送比例以应用内展示为准，我们保留根据运营策略调整的权利；</li>
+        <li>除法律法规或 Apple 政策另有规定外，虚拟金币一经充值成功，原则上不支持退款；若因系统故障导致重复扣款或到账异常，请保留凭证并联系我们或向 Apple 申请处理；</li>
+        <li>您可在「充值记录」「金币记录」中查阅历史交易；对交易有异议的，请在合理期限内提出。</li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="section-tag">第 5 节</div>
+      <h2>知识产权</h2>
+      <ol>
+        <li>本应用的整体界面设计、程序代码、商标、标识及运营内容的知识产权归我们或相关权利人所有；</li>
+        <li>应用内展示的素材、模板、视频、音频、图片等内容的权利归属各自权利人，未经授权不得擅自复制、修改、传播或用于商业用途；</li>
+        <li>您通过本应用上传或提交的内容，您应保证拥有合法权利；您授予我们为提供服务所必需的、非独家的、可转许可的使用许可（限于运营、展示、处理及改进服务之目的）；</li>
+        <li>若您认为本应用内容侵犯您的权益，请通过联系方式提交权属证明，我们将依法处理。</li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="section-tag">第 6 节</div>
+      <h2>AI 生成与内容免责声明</h2>
+      <p>本应用可能提供或关联 AI 生成、模板处理等功能。您理解并同意：</p>
+      <ul>
+        <li>AI 生成结果具有不确定性，我们不保证其完全准确、可用或符合您的特定期望；</li>
+        <li>您应对使用生成内容的方式及后果自行判断并承担相应责任；</li>
+        <li>不得利用 AI 功能制作、传播违法或侵权内容；</li>
+        <li>对生成效果不满意时，可通过应用内意见反馈渠道提交申诉，具体处理规则以应用内说明及客服回复为准。</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-tag">第 7 节</div>
+      <h2>意见反馈</h2>
+      <p>您可通过「意见反馈」「反馈中心」提交问题与建议。提交即表示您同意我们为处理问题而查阅相关账户、任务、消费及日志信息。经审核采纳的反馈，我们可能按活动规则发放金币奖励，具体以应用内公示为准。</p>
+    </section>
+
+    <section>
+      <div class="section-tag">第 8 节</div>
+      <h2>推送与第三方服务</h2>
+      <p>您可选择是否接收推送通知。本应用亦可能使用 Apple、AppsFlyer 等第三方服务；相关服务受其各自条款与隐私政策约束。继续使用即表示您知悉并同意在必要范围内接入上述服务。</p>
+    </section>
+
+    <section>
+      <div class="section-tag">第 9 节</div>
+      <h2>服务变更、中断与终止</h2>
+      <ol>
+        <li>我们可能因系统维护、升级、政策调整或不可抗力暂停或中断部分服务，并将尽力提前通知；</li>
+        <li>若您严重违反本协议，我们有权限制、冻结或终止向您提供服务，并依法追究责任；</li>
+        <li>您可随时停止使用本应用；注销账户后，我们将按《隐私政策》处理您的个人信息。</li>
+      </ol>
+    </section>
+
+    <section>
+      <div class="section-tag">第 10 节</div>
+      <h2>免责声明与责任限制</h2>
+      <p>在法律允许的最大范围内：</p>
+      <ul>
+        <li>本应用按「现状」和「可用」基础提供，我们不作任何明示或默示的保证；</li>
+        <li>因网络、设备、第三方服务、不可抗力或您自身原因导致的服务中断、数据丢失或损失，我们不承担超出法律规定范围的责任；</li>
+        <li>对于您因使用或无法使用本应用而产生的间接、附带、惩罚性损害，我们在法律允许范围内不承担责任；</li>
+        <li>本条款不排除依法不得排除的消费者权利。</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-tag">第 11 节</div>
+      <h2>未成年人条款</h2>
+      <p>若您未满 18 周岁，应在监护人指导下阅读本协议并使用本应用。监护人应承担未成年人使用本应用及进行充值等行为的相关责任。我们建议监护人开启 Apple「屏幕使用时间」及「购买限制」功能。</p>
+    </section>
+
+    <section>
+      <div class="section-tag">第 12 节</div>
+      <h2>适用法律与争议解决</h2>
+      <p>本协议的订立、执行与解释适用中华人民共和国法律（为本条款之目的，不含冲突法规则）。因本协议引起的争议，双方应友好协商；协商不成的，任何一方可向本应用运营方所在地有管辖权的人民法院提起诉讼。</p>
+    </section>
+
+    <section>
+      <div class="section-tag">第 13 节</div>
+      <h2>协议修订</h2>
+      <p>我们有权根据需要修订本协议。修订后将通过应用内展示、弹窗或其他合理方式通知。若您在修订生效后继续使用本应用，即视为接受修订后的协议；若不同意，请停止使用。</p>
+    </section>
+
+    <footer>
+      <div class="footer-label">联系我们</div>
+      <p>如对本协议有任何疑问，请发送邮件至：</p>
+      <p><a href="mailto:support@lavender.app">support@lavender.app</a></p>
+      <p style="margin-top: 16px; font-size: 13px;">运营方：Lavender 应用运营团队</p>
+      <p style="font-size: 13px; margin-top: 8px;">相关文档：<a href="lavender-privacy.html">隐私政策</a></p>
+    </footer>
+  </main>
+</body>
+</html>
