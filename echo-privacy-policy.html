@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Echo 隐私政策</title>
+  <style>
+    :root {
+      --bg: #faf6f3;
+      --surface: #ffffff;
+      --text: #2c2424;
+      --muted: #6b5e5e;
+      --primary: #b86b5d;
+      --primary-dark: #8f4f44;
+      --border: rgba(143, 79, 68, 0.14);
+      --shadow: 0 8px 32px rgba(44, 36, 36, 0.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141010;
+        --surface: #1f1919;
+        --text: #f5efec;
+        --muted: #b9aaa7;
+        --primary: #e8a598;
+        --primary-dark: #f0c4bb;
+        --border: rgba(232, 165, 152, 0.16);
+        --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      -webkit-text-size-adjust: 100%;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 28px 20px 56px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      color: var(--primary-dark);
+      margin: 0 0 8px;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 22px;
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      margin: 1.6em 0 0.6em;
+    }
+    h2:first-child { margin-top: 0; }
+    p, li { font-size: 0.96rem; }
+    ul { padding-left: 1.2em; }
+    li { margin: 0.35em 0; }
+    a { color: var(--primary-dark); }
+    .meta {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .nav {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="brand">Echo</h1>
+      <p class="subtitle">隐私政策</p>
+    </header>
+
+    <article class="card">
+      <p>欢迎使用 Echo（以下简称「本应用」或「我们」）。Echo 是一款面向女性健身与生活方式社群的 iOS 应用。我们重视您的隐私，并希望通过本政策说明我们如何收集、使用、存储与保护您的信息。</p>
+      <p>使用本应用即表示您已阅读并理解本隐私政策。若您不同意本政策，请停止使用本应用。</p>
+
+      <h2>一、我们收集的信息</h2>
+      <p>本应用以<strong>本地存储为主</strong>，不要求注册账号即可使用。我们可能处理以下信息：</p>
+      <ul>
+        <li><strong>您主动提供的信息</strong>：昵称、个人简介、您发布的动态文字、运动记录、评论与私信内容等。</li>
+        <li><strong>您选择的媒体内容</strong>：您在发动态时从相册选择的图片或视频。仅在您授权后访问相册，且通常保存在设备本地。</li>
+        <li><strong>应用内互动数据</strong>：点赞、收藏、关注、挑战参与、训练完成记录、消息与提醒已读状态等，用于在您的设备上呈现个性化体验。</li>
+        <li><strong>偏好设置</strong>：语言、外观（浅色/深色/跟随系统）等。</li>
+        <li><strong>可选远程内容</strong>：若配置了内容接口地址，应用会从该 URL 拉取 JSON 内容（如课程、动态等）。该请求可能向服务器发送标准网络信息（如 IP 地址、User-Agent），具体取决于接口提供方。</li>
+      </ul>
+      <p>本应用<strong>不主动收集</strong>精确地理位置、通讯录、麦克风录音或健康 Kit 数据（除非未来版本另行说明并征得授权）。</p>
+
+      <h2>二、信息的使用方式</h2>
+      <ul>
+        <li>提供、维护与改进本应用的核心功能（浏览、发布、互动、训练与挑战等）。</li>
+        <li>在您的设备上保存进度、偏好与草稿，以便下次打开时继续使用。</li>
+        <li>遵守适用法律法规或响应合法请求。</li>
+      </ul>
+
+      <h2>三、信息的存储与保留</h2>
+      <ul>
+        <li>大部分数据存储在您的 iPhone 本地（UserDefaults、应用文档目录、Keychain）。</li>
+        <li>您发布的动态媒体文件保存在应用沙盒内；卸载应用将删除本地数据（Keychain 项在部分情况下可能保留，取决于系统行为）。</li>
+        <li>我们仅在实现上述目的所必需的期间内保留信息；本地数据由您通过卸载应用或清除应用数据自行删除。</li>
+      </ul>
+
+      <h2>四、权限说明</h2>
+      <ul>
+        <li><strong>相册（Photo Library）</strong>：用于您在发动态时选择图片或视频。您可在系统设置中随时关闭该权限；关闭后仍可浏览内容，但无法从相册添加媒体。</li>
+      </ul>
+
+      <h2>五、信息共享与第三方</h2>
+      <p>我们不会出售您的个人信息。仅在以下情形可能涉及信息共享：</p>
+      <ul>
+        <li><strong>您主动分享</strong>：通过系统分享面板分享内容时，由您选择的第三方应用处理。</li>
+        <li><strong>内容资源</strong>：应用内容中的图片等资源可能托管于第三方 CDN（如 Google 用户内容链接），加载时该第三方可能收到标准请求日志。</li>
+        <li><strong>法律要求</strong>：为遵守法律法规、法院命令或保护用户与公众安全所必需时。</li>
+      </ul>
+
+      <h2>六、未成年人保护</h2>
+      <p>本应用主要面向成年人。若您未满 18 周岁，请在监护人同意与指导下使用。若我们发现未经同意收集未成年人信息，将采取合理措施删除相关数据。</p>
+
+      <h2>七、您的权利</h2>
+      <p>在适用法律允许的范围内，您有权：</p>
+      <ul>
+        <li>在应用内编辑昵称、简介，删除您发布的动态；</li>
+        <li>通过系统设置管理相册等权限；</li>
+        <li>通过卸载应用删除本地存储的数据；</li>
+        <li>通过下方联系方式向我们咨询、更正或删除相关信息（如适用）。</li>
+      </ul>
+
+      <h2>八、信息安全</h2>
+      <p>我们采用合理的技术与管理措施保护信息安全，包括 iOS 沙盒隔离与 Keychain 存储。但互联网与本地环境并非绝对安全，请妥善保管您的设备。</p>
+
+      <h2>九、政策更新</h2>
+      <p>我们可能不时更新本政策。更新后的版本将注明生效日期；重大变更时，我们会在应用内或通过其他合理方式提示。继续使用即视为接受更新后的政策。</p>
+
+      <h2>十、联系我们</h2>
+      <p>如对本隐私政策有疑问或需行使相关权利，请联系：</p>
+      <p>电子邮箱：<a href="mailto:privacy@echo.app">privacy@echo.app</a></p>
+
+      <p class="meta">应用名称：Echo · Bundle ID：com.echo.app<br>生效日期：2026 年 7 月 21 日 · 最近更新：2026 年 7 月 21 日</p>
+    </article>
+
+    <nav class="nav">
+      <a href="echo-terms-of-service.html">用户协议</a>
+      <a href="echo-privacy-policy-en.html">English</a>
+    </nav>
+  </div>
+</body>
+</html>
