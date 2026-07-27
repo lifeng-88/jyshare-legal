@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meanr 隐私政策 - 了解我们如何收集、使用和保护您的个人信息。">
+  <title>Meanr 隐私政策</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0071e3;
+      --border: rgba(0, 0, 0, 0.08);
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #000000;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --muted: #98989d;
+        --border: rgba(255, 255, 255, 0.1);
+        --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 113, 227, 0.12);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .lang-switch {
+      margin-top: 16px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .lang-switch button {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .lang-switch button.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      margin: 20px 0 8px;
+      font-size: 16px;
+    }
+
+    p, li {
+      margin: 0 0 12px;
+      font-size: 15px;
+    }
+
+    ul {
+      margin: 0 0 12px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin: 12px 0;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: rgba(0, 113, 227, 0.06);
+      font-weight: 600;
+    }
+
+    footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    [data-lang] {
+      display: none;
+    }
+
+    [data-lang].active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="badge">Meanr</div>
+      <h1 id="page-title">隐私政策</h1>
+      <p class="meta" id="page-meta">生效日期：2026 年 7 月 27 日 · 最后更新：2026 年 7 月 27 日</p>
+      <div class="lang-switch">
+        <button type="button" class="active" data-set-lang="zh-Hans">简体中文</button>
+        <button type="button" data-set-lang="zh-Hant">繁體中文</button>
+        <button type="button" data-set-lang="en">English</button>
+      </div>
+    </header>
+
+    <!-- 简体中文 -->
+    <div data-lang="zh-Hans" class="active">
+      <section class="card">
+        <h2>引言</h2>
+        <p>欢迎使用 Meanr（以下简称「本应用」或「我们」）。Meanr 是一款基于设备端人工智能的照片风格化工具。</p>
+        <p>我们重视您的隐私。本隐私政策说明我们在您使用 Meanr iOS 应用时如何收集、使用、存储、共享和保护您的信息，以及您享有的相关权利。使用本应用即表示您同意本政策的条款。</p>
+      </section>
+
+      <section class="card">
+        <h2>我们收集的信息</h2>
+        <p>根据功能需要，我们可能收集或处理以下类型的信息：</p>
+
+        <h3>1. 照片与相机数据</h3>
+        <ul>
+          <li>您从相册选择或相机拍摄的照片，用于 AI 风格化与滤镜处理。</li>
+          <li>核心 AI 风格化功能在您的设备本地完成，照片<strong>不会</strong>为风格化处理上传至我们的服务器。</li>
+          <li>生成的作品默认保存在设备本地，您可随时在应用内删除。</li>
+        </ul>
+
+        <h3>2. 设备与标识信息</h3>
+        <ul>
+          <li>设备标识符（如 IDFV），用于应用功能、账户关联与服务稳定性。</li>
+          <li>应用版本、系统版本、渠道号等基础设备信息。</li>
+        </ul>
+
+        <h3>3. 推送通知信息</h3>
+        <ul>
+          <li>在您授权后，我们可能收集 Apple 推送通知服务（APNs）设备令牌，用于向您发送服务通知。</li>
+        </ul>
+
+        <h3>4. 广告归因与追踪信息</h3>
+        <ul>
+          <li>在您授权「允许 App 请求跟踪」后，我们可能通过 AppsFlyer 等第三方服务收集广告标识符（IDFA）及归因数据，用于衡量广告效果与优化产品体验。</li>
+          <li>若您拒绝授权，我们将不会通过 IDFA 进行跨 App 追踪，但仍可能使用不关联个人身份的聚合数据。</li>
+        </ul>
+
+        <h3>5. 应用偏好与本地缓存</h3>
+        <ul>
+          <li>您的设置偏好、作品历史记录元数据、本地缓存等，存储在设备本地（如 UserDefaults、Keychain、应用沙盒目录）。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>我们如何使用信息</h2>
+        <ul>
+          <li>提供照片风格化、滤镜、作品保存与管理等核心功能；</li>
+          <li>维护应用安全、排查故障、改进性能与用户体验；</li>
+          <li>发送推送通知（仅在您授权的情况下）；</li>
+          <li>进行广告归因分析与产品运营统计；</li>
+          <li>遵守适用的法律法规要求。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>设备端处理说明</h2>
+        <p>Meanr 的核心 AI 模型基于 Apple Core ML 在设备端运行。您选择的照片在本地完成推理与渲染，无需上传至云端即可完成风格化处理。这有助于降低隐私风险并提升处理速度。</p>
+        <p>部分辅助功能（如配置加载、Web 内容展示、推送注册等）可能涉及与服务器或第三方服务的网络通信，但不会将您的原始照片用于 AI 推理上传。</p>
+      </section>
+
+      <section class="card">
+        <h2>权限说明</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>权限</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>相册（读取）</td>
+              <td>选择照片进行风格化处理</td>
+            </tr>
+            <tr>
+              <td>相册（写入）</td>
+              <td>将生成结果保存至您的相册</td>
+            </tr>
+            <tr>
+              <td>相机</td>
+              <td>拍摄正脸照片进行风格化处理</td>
+            </tr>
+            <tr>
+              <td>通知</td>
+              <td>向您发送服务相关推送（可选）</td>
+            </tr>
+            <tr>
+              <td>App 跟踪透明度（ATT）</td>
+              <td>优化广告归因与产品体验（可选）</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>您可在 iOS 系统设置中随时管理或撤销上述权限。撤销权限可能导致部分功能无法使用。</p>
+      </section>
+
+      <section class="card">
+        <h2>信息共享与第三方服务</h2>
+        <p>我们不会出售您的个人信息。仅在以下情形可能共享信息：</p>
+        <ul>
+          <li><strong>Apple</strong>：应用分发、推送通知服务；</li>
+          <li><strong>AppsFlyer</strong>：广告归因与营销效果分析（在您授权跟踪的情况下）；</li>
+          <li><strong>服务提供商</strong>：为运营、分析、客服等目的，在必要范围内与受合同约束的合作伙伴共享；</li>
+          <li><strong>法律要求</strong>：为遵守法律法规、司法程序或保护用户及公众安全所必需。</li>
+        </ul>
+        <p>第三方服务有其独立的隐私政策，建议您查阅：</p>
+        <ul>
+          <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隐私政策</a></li>
+          <li><a href="https://www.appsflyer.com/legal/privacy-policy/" target="_blank" rel="noopener">AppsFlyer 隐私政策</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>数据存储与安全</h2>
+        <ul>
+          <li>作品与历史记录默认存储在您的设备本地，最多保留最近 50 条作品（以应用当前版本逻辑为准）。</li>
+          <li>设备标识等敏感信息可能存储在 Keychain 中。</li>
+          <li>我们采取合理的技术与管理措施保护信息安全，但互联网传输无法保证绝对安全。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>数据保留</h2>
+        <p>我们会在实现本政策所述目的所需的期限内保留信息，或依据法律要求保留更长时间。本地数据在您卸载应用或主动清除作品后将被删除（受 iOS 系统机制影响的部分缓存除外）。</p>
+      </section>
+
+      <section class="card">
+        <h2>您的权利</h2>
+        <p>根据适用法律，您可能享有以下权利：</p>
+        <ul>
+          <li>访问、更正或删除您的个人信息；</li>
+          <li>撤回同意（如通知、跟踪权限等）；</li>
+          <li>限制或反对特定数据处理；</li>
+          <li>获取个人信息副本（在适用情况下）。</li>
+        </ul>
+        <p>您可通过 iOS 系统设置管理权限，并在应用内删除本地作品。如需进一步协助，请通过下方联系方式与我们联系。</p>
+      </section>
+
+      <section class="card">
+        <h2>未成年人保护</h2>
+        <p>本应用不面向 13 周岁（或您所在司法辖区规定的更高年龄）以下的未成年人。若我们发现未经监护人同意收集了未成年人的个人信息，将尽快删除相关数据。</p>
+      </section>
+
+      <section class="card">
+        <h2>跨境传输</h2>
+        <p>我们可能通过位于不同国家或地区的服务器或第三方服务处理信息。在此类情况下，我们将采取适当措施确保您的信息受到与本政策一致的保护。</p>
+      </section>
+
+      <section class="card">
+        <h2>政策更新</h2>
+        <p>我们可能不时更新本隐私政策。更新后，我们会在本页面发布新版本并修改「最后更新」日期。重大变更时，我们可能通过应用内提示或其他合理方式通知您。继续使用本应用即表示您接受更新后的政策。</p>
+      </section>
+
+      <section class="card">
+        <h2>联系我们</h2>
+        <p>如对本隐私政策或您的个人信息处理有任何疑问、意见或请求，请通过以下方式联系我们：</p>
+        <ul>
+          <li>电子邮箱：<a href="mailto:privacy@meanr.bar">privacy@meanr.bar</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- 繁體中文 -->
+    <div data-lang="zh-Hant">
+      <section class="card">
+        <h2>引言</h2>
+        <p>歡迎使用 Meanr（以下簡稱「本應用」或「我們」）。Meanr 是一款基於裝置端人工智慧的照片風格化工具。</p>
+        <p>我們重視您的隱私。本隱私政策說明我們在您使用 Meanr iOS 應用時如何收集、使用、儲存、共享和保護您的資訊，以及您享有的相關權利。使用本應用即表示您同意本政策的條款。</p>
+      </section>
+
+      <section class="card">
+        <h2>我們收集的資訊</h2>
+        <p>根據功能需要，我們可能收集或處理以下類型的資訊：</p>
+
+        <h3>1. 照片與相機資料</h3>
+        <ul>
+          <li>您從相簿選擇或相機拍攝的照片，用於 AI 風格化與濾鏡處理。</li>
+          <li>核心 AI 風格化功能在您的裝置本地完成，照片<strong>不會</strong>為風格化處理上傳至我們的伺服器。</li>
+          <li>生成的作品預設保存在裝置本地，您可隨時在應用內刪除。</li>
+        </ul>
+
+        <h3>2. 裝置與識別資訊</h3>
+        <ul>
+          <li>裝置識別碼（如 IDFV），用於應用功能、帳戶關聯與服務穩定性。</li>
+          <li>應用版本、系統版本、渠道號等基礎裝置資訊。</li>
+        </ul>
+
+        <h3>3. 推播通知資訊</h3>
+        <ul>
+          <li>在您授權後，我們可能收集 Apple 推播通知服務（APNs）裝置權杖，用於向您發送服務通知。</li>
+        </ul>
+
+        <h3>4. 廣告歸因與追蹤資訊</h3>
+        <ul>
+          <li>在您授權「允許 App 要求追蹤」後，我們可能透過 AppsFlyer 等第三方服務收集廣告識別碼（IDFA）及歸因資料，用於衡量廣告效果與優化產品體驗。</li>
+          <li>若您拒絕授權，我們將不會透過 IDFA 進行跨 App 追蹤，但仍可能使用不關聯個人身份的聚合資料。</li>
+        </ul>
+
+        <h3>5. 應用偏好與本地快取</h3>
+        <ul>
+          <li>您的設定偏好、作品歷史記錄元資料、本地快取等，儲存在裝置本地（如 UserDefaults、Keychain、應用沙盒目錄）。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>我們如何使用資訊</h2>
+        <ul>
+          <li>提供照片風格化、濾鏡、作品保存與管理等核心功能；</li>
+          <li>維護應用安全、排查故障、改進效能與使用者體驗；</li>
+          <li>發送推播通知（僅在您授權的情況下）；</li>
+          <li>進行廣告歸因分析與產品營運統計；</li>
+          <li>遵守適用的法律法規要求。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>裝置端處理說明</h2>
+        <p>Meanr 的核心 AI 模型基於 Apple Core ML 在裝置端執行。您選擇的照片在本地完成推理與渲染，無需上傳至雲端即可完成風格化處理。這有助於降低隱私風險並提升處理速度。</p>
+        <p>部分輔助功能（如配置載入、Web 內容展示、推播註冊等）可能涉及與伺服器或第三方服務的網路通訊，但不會將您的原始照片用於 AI 推理上傳。</p>
+      </section>
+
+      <section class="card">
+        <h2>權限說明</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>權限</th>
+              <th>用途</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>相簿（讀取）</td>
+              <td>選擇照片進行風格化處理</td>
+            </tr>
+            <tr>
+              <td>相簿（寫入）</td>
+              <td>將生成結果保存至您的相簿</td>
+            </tr>
+            <tr>
+              <td>相機</td>
+              <td>拍攝正臉照片進行風格化處理</td>
+            </tr>
+            <tr>
+              <td>通知</td>
+              <td>向您發送服務相關推播（可選）</td>
+            </tr>
+            <tr>
+              <td>App 追蹤透明度（ATT）</td>
+              <td>優化廣告歸因與產品體驗（可選）</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>您可在 iOS 系統設定中隨時管理或撤銷上述權限。撤銷權限可能導致部分功能無法使用。</p>
+      </section>
+
+      <section class="card">
+        <h2>資訊共享與第三方服務</h2>
+        <p>我們不會出售您的個人資訊。僅在以下情形可能共享資訊：</p>
+        <ul>
+          <li><strong>Apple</strong>：應用分發、推播通知服務；</li>
+          <li><strong>AppsFlyer</strong>：廣告歸因與行銷效果分析（在您授權追蹤的情況下）；</li>
+          <li><strong>服務提供商</strong>：為營運、分析、客服等目的，在必要範圍內與受合約約束的合作夥伴共享；</li>
+          <li><strong>法律要求</strong>：為遵守法律法規、司法程序或保護使用者及公眾安全所必需。</li>
+        </ul>
+        <p>第三方服務有其獨立的隱私政策，建議您查閱：</p>
+        <ul>
+          <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple 隱私政策</a></li>
+          <li><a href="https://www.appsflyer.com/legal/privacy-policy/" target="_blank" rel="noopener">AppsFlyer 隱私政策</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>資料儲存與安全</h2>
+        <ul>
+          <li>作品與歷史記錄預設儲存在您的裝置本地，最多保留最近 50 條作品（以應用目前版本邏輯為準）。</li>
+          <li>裝置識別等敏感資訊可能儲存在 Keychain 中。</li>
+          <li>我們採取合理的技術與管理措施保護資訊安全，但網際網路傳輸無法保證絕對安全。</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>資料保留</h2>
+        <p>我們會在實現本政策所述目的所需的期限內保留資訊，或依據法律要求保留更長時間。本地資料在您解除安裝應用或主動清除作品後將被刪除（受 iOS 系統機制影響的部分快取除外）。</p>
+      </section>
+
+      <section class="card">
+        <h2>您的權利</h2>
+        <p>根據適用法律，您可能享有以下權利：</p>
+        <ul>
+          <li>存取、更正或刪除您的個人資訊；</li>
+          <li>撤回同意（如通知、追蹤權限等）；</li>
+          <li>限制或反對特定資料處理；</li>
+          <li>取得個人資訊副本（在適用情況下）。</li>
+        </ul>
+        <p>您可透過 iOS 系統設定管理權限，並在應用內刪除本地作品。如需進一步協助，請透過下方聯絡方式與我們聯繫。</p>
+      </section>
+
+      <section class="card">
+        <h2>未成年人保護</h2>
+        <p>本應用不面向 13 週歲（或您所在司法轄區規定的更高年齡）以下的未成年人。若我們發現未經監護人同意收集了未成年人的個人資訊，將儘快刪除相關資料。</p>
+      </section>
+
+      <section class="card">
+        <h2>跨境傳輸</h2>
+        <p>我們可能透過位於不同國家或地區的伺服器或第三方服務處理資訊。在此類情況下，我們將採取適當措施確保您的資訊受到與本政策一致的保護。</p>
+      </section>
+
+      <section class="card">
+        <h2>政策更新</h2>
+        <p>我們可能不時更新本隱私政策。更新後，我們會在本頁面發布新版本並修改「最後更新」日期。重大變更時，我們可能透過應用內提示或其他合理方式通知您。繼續使用本應用即表示您接受更新後的政策。</p>
+      </section>
+
+      <section class="card">
+        <h2>聯絡我們</h2>
+        <p>如對本隱私政策或您的個人資訊處理有任何疑問、意見或請求，請透過以下方式聯絡我們：</p>
+        <ul>
+          <li>電子郵件：<a href="mailto:privacy@meanr.bar">privacy@meanr.bar</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- English -->
+    <div data-lang="en">
+      <section class="card">
+        <h2>Introduction</h2>
+        <p>Welcome to Meanr (the "App" or "we"). Meanr is an on-device AI photo stylization tool.</p>
+        <p>We value your privacy. This Privacy Policy explains how we collect, use, store, share, and protect your information when you use the Meanr iOS app, and the rights you may have. By using the App, you agree to this Policy.</p>
+      </section>
+
+      <section class="card">
+        <h2>Information We Collect</h2>
+        <p>Depending on the features you use, we may collect or process the following types of information:</p>
+
+        <h3>1. Photos and Camera Data</h3>
+        <ul>
+          <li>Photos you select from your library or capture with the camera for AI stylization and filters.</li>
+          <li>Core AI stylization runs locally on your device. Photos are <strong>not</strong> uploaded to our servers for AI processing.</li>
+          <li>Generated works are stored locally on your device by default and can be deleted at any time in the App.</li>
+        </ul>
+
+        <h3>2. Device and Identifier Information</h3>
+        <ul>
+          <li>Device identifiers (such as IDFV) for app functionality, account association, and service stability.</li>
+          <li>Basic device information such as app version, OS version, and channel ID.</li>
+        </ul>
+
+        <h3>3. Push Notification Information</h3>
+        <ul>
+          <li>With your permission, we may collect Apple Push Notification service (APNs) device tokens to send you service-related notifications.</li>
+        </ul>
+
+        <h3>4. Advertising Attribution and Tracking</h3>
+        <ul>
+          <li>With your permission via App Tracking Transparency (ATT), we may collect advertising identifiers (IDFA) and attribution data through third-party services such as AppsFlyer to measure ad performance and improve the product experience.</li>
+          <li>If you deny tracking permission, we will not use IDFA for cross-app tracking, but we may still use aggregated data that does not identify you personally.</li>
+        </ul>
+
+        <h3>5. App Preferences and Local Cache</h3>
+        <ul>
+          <li>Your settings, work history metadata, and local cache are stored on your device (e.g., UserDefaults, Keychain, app sandbox).</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>How We Use Information</h2>
+        <ul>
+          <li>Provide core features such as photo stylization, filters, and work management;</li>
+          <li>Maintain app security, troubleshoot issues, and improve performance and user experience;</li>
+          <li>Send push notifications (only with your permission);</li>
+          <li>Perform advertising attribution analysis and product analytics;</li>
+          <li>Comply with applicable laws and regulations.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>On-Device Processing</h2>
+        <p>Meanr's core AI models run on-device using Apple Core ML. Photos you select are processed locally for inference and rendering without uploading to the cloud for stylization. This helps reduce privacy risk and improve processing speed.</p>
+        <p>Some auxiliary features (such as configuration loading, web content display, and push registration) may involve network communication with servers or third-party services, but your original photos are not uploaded for AI inference.</p>
+      </section>
+
+      <section class="card">
+        <h2>Permissions</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Photo Library (Read)</td>
+              <td>Select photos for stylization</td>
+            </tr>
+            <tr>
+              <td>Photo Library (Write)</td>
+              <td>Save generated results to your library</td>
+            </tr>
+            <tr>
+              <td>Camera</td>
+              <td>Capture front-facing photos for stylization</td>
+            </tr>
+            <tr>
+              <td>Notifications</td>
+              <td>Send service-related push notifications (optional)</td>
+            </tr>
+            <tr>
+              <td>App Tracking Transparency (ATT)</td>
+              <td>Optimize ad attribution and product experience (optional)</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>You can manage or revoke these permissions at any time in iOS Settings. Revoking permissions may limit certain features.</p>
+      </section>
+
+      <section class="card">
+        <h2>Information Sharing and Third-Party Services</h2>
+        <p>We do not sell your personal information. We may share information only in the following circumstances:</p>
+        <ul>
+          <li><strong>Apple</strong>: App distribution and push notification services;</li>
+          <li><strong>AppsFlyer</strong>: Advertising attribution and marketing analytics (when tracking is authorized);</li>
+          <li><strong>Service providers</strong>: Partners bound by contract for operations, analytics, and support as necessary;</li>
+          <li><strong>Legal requirements</strong>: When required to comply with laws, legal processes, or to protect users and public safety.</li>
+        </ul>
+        <p>Third-party services have their own privacy policies. We recommend reviewing:</p>
+        <ul>
+          <li><a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+          <li><a href="https://www.appsflyer.com/legal/privacy-policy/" target="_blank" rel="noopener">AppsFlyer Privacy Policy</a></li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Data Storage and Security</h2>
+        <ul>
+          <li>Works and history are stored locally on your device by default, retaining up to the 50 most recent works (subject to the current app version).</li>
+          <li>Sensitive information such as device identifiers may be stored in the Keychain.</li>
+          <li>We implement reasonable technical and organizational measures to protect your information, but no method of transmission over the Internet is completely secure.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Data Retention</h2>
+        <p>We retain information for as long as necessary to fulfill the purposes described in this Policy, or as required by law. Local data is deleted when you uninstall the App or manually clear your works (except for certain caches affected by iOS system mechanisms).</p>
+      </section>
+
+      <section class="card">
+        <h2>Your Rights</h2>
+        <p>Depending on applicable law, you may have the right to:</p>
+        <ul>
+          <li>Access, correct, or delete your personal information;</li>
+          <li>Withdraw consent (e.g., for notifications or tracking);</li>
+          <li>Restrict or object to certain processing;</li>
+          <li>Obtain a copy of your personal information where applicable.</li>
+        </ul>
+        <p>You can manage permissions in iOS Settings and delete local works in the App. For further assistance, please contact us using the details below.</p>
+      </section>
+
+      <section class="card">
+        <h2>Children's Privacy</h2>
+        <p>The App is not directed to children under 13 (or the minimum age required in your jurisdiction). If we learn that we have collected personal information from a child without parental consent, we will delete it promptly.</p>
+      </section>
+
+      <section class="card">
+        <h2>International Transfers</h2>
+        <p>We may process information through servers or third-party services located in different countries or regions. In such cases, we take appropriate measures to ensure your information receives protection consistent with this Policy.</p>
+      </section>
+
+      <section class="card">
+        <h2>Policy Updates</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will post the revised version on this page and update the "Last Updated" date. For material changes, we may notify you through in-app notices or other reasonable means. Continued use of the App constitutes acceptance of the updated Policy.</p>
+      </section>
+
+      <section class="card">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, comments, or requests regarding this Privacy Policy or your personal information, please contact us at:</p>
+        <ul>
+          <li>Email: <a href="mailto:privacy@meanr.bar">privacy@meanr.bar</a></li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Meanr AI. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var titles = {
+        "zh-Hans": "Meanr 隐私政策",
+        "zh-Hant": "Meanr 隱私政策",
+        "en": "Meanr Privacy Policy"
+      };
+
+      var metas = {
+        "zh-Hans": "生效日期：2026 年 7 月 27 日 · 最后更新：2026 年 7 月 27 日",
+        "zh-Hant": "生效日期：2026 年 7 月 27 日 · 最後更新：2026 年 7 月 27 日",
+        "en": "Effective date: July 27, 2026 · Last updated: July 27, 2026"
+      };
+
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+        document.getElementById("page-title").textContent = titles[lang].replace("Meanr ", lang === "en" ? "" : "").trim();
+        document.getElementById("page-title").textContent = titles[lang];
+        document.getElementById("page-meta").textContent = metas[lang];
+        document.title = titles[lang];
+
+        document.querySelectorAll("[data-lang]").forEach(function (el) {
+          el.classList.toggle("active", el.getAttribute("data-lang") === lang);
+        });
+
+        document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-set-lang") === lang);
+        });
+
+        try {
+          localStorage.setItem("meanr-privacy-lang", lang);
+        } catch (e) {}
+      }
+
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          setLang(btn.getAttribute("data-set-lang"));
+        });
+      });
+
+      var saved = null;
+      try {
+        saved = localStorage.getItem("meanr-privacy-lang");
+      } catch (e) {}
+
+      var browserLang = (navigator.language || "zh-Hans").toLowerCase();
+      var initial = saved || (browserLang.startsWith("zh-hant") || browserLang.startsWith("zh-tw") ? "zh-Hant" : browserLang.startsWith("zh") ? "zh-Hans" : browserLang.startsWith("en") ? "en" : "zh-Hans");
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
