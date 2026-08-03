@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>隐私政策 · MemoGallery</title>
+  <meta name="description" content="MemoGallery 隐私政策 — Privacy Policy" />
+  <style>
+    :root {
+      --accent: #d16180;
+      --accent-soft: #f5c4d0;
+      --text: #2b2226;
+      --muted: #6b5c61;
+      --bg: #fdf6f8;
+      --card: #ffffff;
+      --line: rgba(43, 34, 38, 0.08);
+      --shadow: 0 12px 40px rgba(209, 97, 128, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(245, 196, 208, 0.55), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(209, 97, 128, 0.12), transparent 50%),
+        var(--bg);
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    h1 {
+      margin: 6px 0 0;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .lang {
+      display: inline-flex;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #fff;
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    article h2 {
+      margin: 1.6em 0 0.55em;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+    article h2:first-child { margin-top: 0; }
+    article p, article li { color: var(--text); }
+    article ul { padding-left: 1.2em; margin: 0.4em 0 0.8em; }
+    article li { margin: 0.35em 0; }
+    article strong { font-weight: 650; }
+    .lead {
+      color: var(--muted);
+      margin: 0 0 1.2em;
+    }
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover { text-decoration: underline; }
+    .panel[hidden] { display: none; }
+    @media (max-width: 520px) {
+      article { padding: 22px 18px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">MemoGallery</div>
+        <h1 data-i18n-zh="隐私政策" data-i18n-en="Privacy Policy">隐私政策</h1>
+        <p class="meta">
+          <span data-i18n-zh="更新日期：2026-07-13 · 生效日期：2026-07-13" data-i18n-en="Last updated: July 13, 2026 · Effective: July 13, 2026">更新日期：2026-07-13 · 生效日期：2026-07-13</span>
+        </p>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <article id="panel-zh" class="panel" lang="zh-Hans">
+      <p class="lead">欢迎使用 MemoGallery（以下简称“本应用”）。我们非常重视您的隐私。请仔细阅读本政策，以了解我们如何处理相关信息。</p>
+
+      <h2>1. 我们收集的信息</h2>
+      <ul>
+        <li><strong>备忘录内容</strong>：您创建的文字、图片、视频附件仅保存在本机。</li>
+        <li><strong>本地图库文件</strong>：您导入的图片保存在本应用沙盒目录。</li>
+        <li><strong>系统权限</strong>：访问相册、Face ID / 设备密码验证仅用于您主动触发的功能。</li>
+      </ul>
+
+      <h2>2. 信息如何使用</h2>
+      <ul>
+        <li>仅用于提供备忘录、图库导入导出、锁定/解锁等本地功能。</li>
+        <li><strong>不会</strong>将您的备忘录、照片或视频上传至我们的服务器（本应用当前无云同步）。</li>
+      </ul>
+
+      <h2>3. 信息共享</h2>
+      <ul>
+        <li>除非获得您的明确同意，或法律法规要求，我们不会向第三方出售或共享您的个人内容。</li>
+        <li>当您使用系统分享功能时，内容将按您选择的目标 App / 服务处理，适用其隐私政策。</li>
+      </ul>
+
+      <h2>4. 数据存储与安全</h2>
+      <ul>
+        <li>数据默认存储于您的设备本地。</li>
+        <li>锁定备忘录、隐藏图库等功能依赖系统身份验证，以增强本地访问控制。</li>
+        <li>卸载应用可能导致本地数据被清除，请自行备份重要内容。</li>
+      </ul>
+
+      <h2>5. 您的选择</h2>
+      <ul>
+        <li>可在系统设置中随时撤销相册、Face ID 等权限。</li>
+        <li>可删除备忘录、本地图片，或卸载应用以清除数据。</li>
+      </ul>
+
+      <h2>6. 儿童隐私</h2>
+      <p>本应用不面向 13 岁以下儿童。若您认为我们无意中收集了相关信息，请联系我们以便处理。</p>
+
+      <h2>7. 政策更新</h2>
+      <p>我们可能适时更新本政策，并在应用内展示更新日期。继续使用即表示您了解更新后的内容。</p>
+
+      <h2>8. 联系我们</h2>
+      <p>如有隐私相关问题，请通过应用内反馈渠道或开发者预留邮箱与我们联系。</p>
+    </article>
+
+    <article id="panel-en" class="panel" lang="en" hidden>
+      <p class="lead">Welcome to MemoGallery (“the App”). We value your privacy. Please read this policy to understand how information is handled.</p>
+
+      <h2>1. Information We Process</h2>
+      <ul>
+        <li><strong>Memo content</strong>: Text and attachments you create are stored on-device only.</li>
+        <li><strong>Local gallery files</strong>: Imported photos are kept in the App sandbox.</li>
+        <li><strong>System permissions</strong>: Photos and Face ID / passcode are used only for features you initiate.</li>
+      </ul>
+
+      <h2>2. How We Use Information</h2>
+      <ul>
+        <li>Solely to provide local features such as memos, gallery import/export, and lock/unlock.</li>
+        <li>We <strong>do not</strong> upload your memos, photos, or videos to our servers (no cloud sync in the current version).</li>
+      </ul>
+
+      <h2>3. Sharing</h2>
+      <ul>
+        <li>We do not sell or share your personal content with third parties without your consent, except as required by law.</li>
+        <li>If you use system Share sheets, content is handled by the destination you choose under its own policy.</li>
+      </ul>
+
+      <h2>4. Storage &amp; Security</h2>
+      <ul>
+        <li>Data is stored locally on your device by default.</li>
+        <li>Memo lock and gallery hide rely on system authentication for stronger on-device access control.</li>
+        <li>Uninstalling the App may erase local data; please back up important content yourself.</li>
+      </ul>
+
+      <h2>5. Your Choices</h2>
+      <ul>
+        <li>You may revoke Photos / Face ID permissions in system Settings at any time.</li>
+        <li>You may delete memos or local photos, or uninstall the App to remove data.</li>
+      </ul>
+
+      <h2>6. Children’s Privacy</h2>
+      <p>The App is not directed to children under 13. Contact us if you believe we collected such information inadvertently.</p>
+
+      <h2>7. Updates</h2>
+      <p>We may update this policy and show the revision date in the App. Continued use means you acknowledge the updated terms.</p>
+
+      <h2>8. Contact</h2>
+      <p>For privacy questions, contact us via in-app feedback or the developer email on file.</p>
+    </article>
+
+    <footer>
+      <p>
+        <a href="./MemoGallery_support.html" data-i18n-zh="支持与帮助" data-i18n-en="Support">支持与帮助</a>
+        ·
+        <a href="./MemoGallery_terms.html" data-i18n-zh="查看用户协议" data-i18n-en="View Terms of Use">查看用户协议</a>
+        · MemoGallery
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var zh = document.getElementById("panel-zh");
+      var en = document.getElementById("panel-en");
+      var btnZh = document.getElementById("btn-zh");
+      var btnEn = document.getElementById("btn-en");
+
+      function setLang(lang) {
+        var isEN = lang === "en";
+        zh.hidden = isEN;
+        en.hidden = !isEN;
+        btnZh.setAttribute("aria-pressed", String(!isEN));
+        btnEn.setAttribute("aria-pressed", String(isEN));
+        document.documentElement.lang = isEN ? "en" : "zh-Hans";
+        document.querySelectorAll("[data-i18n-zh]").forEach(function (el) {
+          el.textContent = isEN ? el.getAttribute("data-i18n-en") : el.getAttribute("data-i18n-zh");
+        });
+        document.title = isEN ? "Privacy Policy · MemoGallery" : "隐私政策 · MemoGallery";
+      }
+
+      btnZh.addEventListener("click", function () { setLang("zh"); });
+      btnEn.addEventListener("click", function () { setLang("en"); });
+
+      if (/^en\b/i.test(navigator.language || "")) setLang("en");
+    })();
+  </script>
+</body>
+</html>

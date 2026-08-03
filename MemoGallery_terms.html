@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>用户协议 · MemoGallery</title>
+  <meta name="description" content="MemoGallery 用户协议 — Terms of Use" />
+  <style>
+    :root {
+      --accent: #d16180;
+      --accent-soft: #f5c4d0;
+      --text: #2b2226;
+      --muted: #6b5c61;
+      --bg: #fdf6f8;
+      --card: #ffffff;
+      --line: rgba(43, 34, 38, 0.08);
+      --shadow: 0 12px 40px rgba(209, 97, 128, 0.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(245, 196, 208, 0.55), transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, rgba(209, 97, 128, 0.12), transparent 50%),
+        var(--bg);
+      line-height: 1.7;
+    }
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    h1 {
+      margin: 6px 0 0;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+    .meta {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .lang {
+      display: inline-flex;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #fff;
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    article h2 {
+      margin: 1.6em 0 0.55em;
+      font-size: 1.15rem;
+      color: var(--text);
+    }
+    article h2:first-child { margin-top: 0; }
+    article p, article li { color: var(--text); }
+    article ul { padding-left: 1.2em; margin: 0.4em 0 0.8em; }
+    article li { margin: 0.35em 0; }
+    article strong { font-weight: 650; }
+    .lead {
+      color: var(--muted);
+      margin: 0 0 1.2em;
+    }
+    footer {
+      margin-top: 28px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover { text-decoration: underline; }
+    .panel[hidden] { display: none; }
+    @media (max-width: 520px) {
+      article { padding: 22px 18px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <div class="brand">MemoGallery</div>
+        <h1 data-i18n-zh="用户协议" data-i18n-en="Terms of Use">用户协议</h1>
+        <p class="meta">
+          <span data-i18n-zh="更新日期：2026-07-13 · 生效日期：2026-07-13" data-i18n-en="Last updated: July 13, 2026 · Effective: July 13, 2026">更新日期：2026-07-13 · 生效日期：2026-07-13</span>
+        </p>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+        <button type="button" id="btn-en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <article id="panel-zh" class="panel" lang="zh-Hans">
+      <p class="lead">请在使用 MemoGallery（以下简称“本应用”）前仔细阅读本协议。使用本应用即表示您同意以下条款。</p>
+
+      <h2>1. 服务说明</h2>
+      <ul>
+        <li>本应用提供本地备忘录、系统相册浏览、图片导入导出、锁定与隐私隐藏等功能。</li>
+        <li>功能以您设备上实际可用能力为准，并可能随版本更新调整。</li>
+      </ul>
+
+      <h2>2. 使用规范</h2>
+      <p>您承诺：</p>
+      <ul>
+        <li>仅将本应用用于合法目的；</li>
+        <li>不利用本应用从事侵权、传播违法内容或其他不当行为；</li>
+        <li>妥善保管设备与系统密码，对设备上的操作负责。</li>
+      </ul>
+
+      <h2>3. 用户内容</h2>
+      <ul>
+        <li>您保留对自己创建或导入内容的权利。</li>
+        <li>您应确保拥有相应内容的合法使用权，并自行承担因内容引发的责任。</li>
+      </ul>
+
+      <h2>4. 免责声明</h2>
+      <ul>
+        <li>本应用按“现状”提供，在法律允许范围内，不对因设备故障、误操作、系统权限变更、数据丢失等造成的损失承担责任。</li>
+        <li>请定期自行备份重要备忘录与媒体文件。</li>
+      </ul>
+
+      <h2>5. 知识产权</h2>
+      <ul>
+        <li>本应用的名称、界面、代码及相关设计受法律保护。</li>
+        <li>未经授权，不得复制、修改、反向工程或用于商业用途。</li>
+      </ul>
+
+      <h2>6. 协议变更与终止</h2>
+      <ul>
+        <li>我们可能更新本协议，并在应用内展示。若您不同意更新内容，请停止使用。</li>
+        <li>您可随时停止使用并卸载本应用。</li>
+      </ul>
+
+      <h2>7. 适用法律</h2>
+      <p>本协议的解释与争议解决，适用您所在地相关法律法规（在法律允许范围内）。</p>
+
+      <h2>8. 联系我们</h2>
+      <p>如对本协议有疑问，请通过应用内反馈渠道联系我们。</p>
+    </article>
+
+    <article id="panel-en" class="panel" lang="en" hidden>
+      <p class="lead">Please read these Terms before using MemoGallery (“the App”). By using the App, you agree to the following.</p>
+
+      <h2>1. Service Description</h2>
+      <ul>
+        <li>The App provides local memos, system album browsing, photo import/export, lock, and gallery privacy features.</li>
+        <li>Features depend on your device capabilities and may change with updates.</li>
+      </ul>
+
+      <h2>2. Acceptable Use</h2>
+      <p>You agree to:</p>
+      <ul>
+        <li>use the App only for lawful purposes;</li>
+        <li>not use it for infringement, illegal content, or other misuse;</li>
+        <li>safeguard your device and passcode and remain responsible for actions on the device.</li>
+      </ul>
+
+      <h2>3. Your Content</h2>
+      <ul>
+        <li>You retain rights to content you create or import.</li>
+        <li>You must have lawful rights to such content and are responsible for it.</li>
+      </ul>
+
+      <h2>4. Disclaimer</h2>
+      <ul>
+        <li>The App is provided “as is.” To the extent permitted by law, we are not liable for losses from device failure, user error, permission changes, or data loss.</li>
+        <li>Please back up important memos and media regularly.</li>
+      </ul>
+
+      <h2>5. Intellectual Property</h2>
+      <ul>
+        <li>The App name, UI, code, and related designs are protected by law.</li>
+        <li>Unauthorized copying, modification, reverse engineering, or commercial use is prohibited.</li>
+      </ul>
+
+      <h2>6. Changes &amp; Termination</h2>
+      <ul>
+        <li>We may update these Terms in the App. If you disagree, stop using the App.</li>
+        <li>You may stop using and uninstall the App at any time.</li>
+      </ul>
+
+      <h2>7. Governing Law</h2>
+      <p>These Terms are governed by applicable laws in your jurisdiction to the extent permitted.</p>
+
+      <h2>8. Contact</h2>
+      <p>For questions about these Terms, contact us via in-app feedback.</p>
+    </article>
+
+    <footer>
+      <p>
+        <a href="./MemoGallery_support.html" data-i18n-zh="支持与帮助" data-i18n-en="Support">支持与帮助</a>
+        ·
+        <a href="./MemoGallery_privacy.html" data-i18n-zh="查看隐私政策" data-i18n-en="View Privacy Policy">查看隐私政策</a>
+        · MemoGallery
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var zh = document.getElementById("panel-zh");
+      var en = document.getElementById("panel-en");
+      var btnZh = document.getElementById("btn-zh");
+      var btnEn = document.getElementById("btn-en");
+
+      function setLang(lang) {
+        var isEN = lang === "en";
+        zh.hidden = isEN;
+        en.hidden = !isEN;
+        btnZh.setAttribute("aria-pressed", String(!isEN));
+        btnEn.setAttribute("aria-pressed", String(isEN));
+        document.documentElement.lang = isEN ? "en" : "zh-Hans";
+        document.querySelectorAll("[data-i18n-zh]").forEach(function (el) {
+          el.textContent = isEN ? el.getAttribute("data-i18n-en") : el.getAttribute("data-i18n-zh");
+        });
+        document.title = isEN ? "Terms of Use · MemoGallery" : "用户协议 · MemoGallery";
+      }
+
+      btnZh.addEventListener("click", function () { setLang("zh"); });
+      btnEn.addEventListener("click", function () { setLang("en"); });
+
+      if (/^en\b/i.test(navigator.language || "")) setLang("en");
+    })();
+  </script>
+</body>
+</html>
