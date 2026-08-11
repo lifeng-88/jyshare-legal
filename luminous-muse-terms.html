@@ -83,7 +83,88 @@
       display: none !important;
     }
   </style>
-  <script src="legal-lang.js"></script>
+  <script>
+  (function () {
+    var STORAGE_KEY = "lm_legal_lang";
+
+    function normalizeLang(value) {
+      if (!value) return null;
+      var v = String(value).trim();
+      if (v === "en") return "en";
+      if (v === "zh-Hant" || v === "zh-hant" || v === "zh-TW" || v === "zh-tw") return "zh-Hant";
+      return null;
+    }
+
+    function resolveLang() {
+      try {
+        var params = new URLSearchParams(window.location.search || "");
+        var fromQuery = normalizeLang(params.get("lang"));
+        if (fromQuery) return fromQuery;
+      } catch (e) {}
+
+      try {
+        var stored = normalizeLang(localStorage.getItem(STORAGE_KEY));
+        if (stored) return stored;
+      } catch (e) {}
+
+      var nav = (navigator.language || "en").toLowerCase();
+      if (nav.indexOf("zh") === 0) return "zh-Hant";
+      return "en";
+    }
+
+    function updateButtons(lang) {
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        var active = button.getAttribute("data-set-lang") === lang;
+        button.classList.toggle("is-active", active);
+        button.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+    }
+
+    function patchLinks(lang) {
+      document.querySelectorAll('a[href$=".html"]').forEach(function (anchor) {
+        var href = anchor.getAttribute("href");
+        if (!href || href.indexOf("mailto:") === 0) return;
+        try {
+          var url = new URL(href, window.location.href);
+          url.searchParams.set("lang", lang);
+          anchor.setAttribute("href", url.pathname.split("/").pop() + url.search);
+        } catch (e) {}
+      });
+    }
+
+    function applyLang(lang) {
+      var resolved = normalizeLang(lang) || "en";
+      document.documentElement.setAttribute("data-app-lang", resolved);
+      document.documentElement.lang = resolved === "zh-Hant" ? "zh-Hant" : "en";
+      try {
+        localStorage.setItem(STORAGE_KEY, resolved);
+      } catch (e) {}
+      updateButtons(resolved);
+      patchLinks(resolved);
+    }
+
+    applyLang(resolveLang());
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var current = document.documentElement.getAttribute("data-app-lang") || "en";
+      updateButtons(current);
+      patchLinks(current);
+
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function (event) {
+          event.preventDefault();
+          var next = button.getAttribute("data-set-lang");
+          applyLang(next);
+          try {
+            var url = new URL(window.location.href);
+            url.searchParams.set("lang", next);
+            window.history.replaceState(null, "", url.toString());
+          } catch (e) {}
+        });
+      });
+    });
+  })();
+  </script>
 </head>
 <body>
   <div class="wrap">
