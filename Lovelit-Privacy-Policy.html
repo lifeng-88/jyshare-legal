@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy · Lovelit</title>
+    <style>
+        :root {
+            --primary: #874E58;
+            --rose: #B76E79;
+            --text: #221919;
+            --muted: #514345;
+            --bg: #FFF8F7;
+            --card: #ffffff;
+            --border: #D6C2C3;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Segoe UI", sans-serif;
+            line-height: 1.8;
+            color: var(--text);
+            background: var(--bg);
+            padding: 20px 16px 48px;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 36px 24px;
+            box-shadow: 0 2px 16px rgba(135, 78, 88, 0.08);
+        }
+        .topbar { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+        .brand {
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--rose);
+            margin-bottom: 8px;
+        }
+        .lang-switch {
+            display: inline-flex;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .lang-switch button {
+            border: 0;
+            background: transparent;
+            padding: 6px 14px;
+            font-size: 13px;
+            color: var(--muted);
+            cursor: pointer;
+        }
+        .lang-switch button.active { background: var(--primary); color: #fff; }
+        html[data-lang="en"] .lang-zh,
+        html[data-lang="zh"] .lang-en { display: none; }
+        h1 { font-size: 26px; color: var(--primary); margin-bottom: 8px; }
+        .meta {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        h2 { font-size: 17px; margin: 28px 0 12px; color: var(--primary); }
+        p, li { font-size: 15px; color: var(--muted); margin-bottom: 10px; }
+        ul, ol { padding-left: 22px; margin-bottom: 12px; }
+        li { margin-bottom: 6px; }
+        a { color: var(--rose); }
+        .highlight {
+            background: #FFF0F0;
+            border-left: 3px solid var(--rose);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
+        }
+        .footer {
+            margin-top: 36px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: #847375;
+            text-align: center;
+        }
+        nav { margin: 16px 0 0; font-size: 14px; }
+        nav a { margin-right: 16px; }
+    </style>
+</head>
+<body data-title-en="Privacy Policy · Lovelit" data-title-zh="隐私政策 · Lovelit">
+    <div class="container">
+        <div class="topbar">
+            <div class="brand">Lovelit</div>
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" data-set-lang="en">EN</button>
+                <button type="button" data-set-lang="zh">中文</button>
+            </div>
+        </div>
+
+        <div class="lang-en">
+            <h1>Privacy Policy</h1>
+            <p class="meta">
+                Effective date: August 24, 2026 · Applies to version 1.0.0 and later<br>
+                App name: Lovelit · Bundle ID: com.xindong.daily
+            </p>
+            <nav>
+                <a href="Lovelit-User-Agreement.html">User Agreement</a>
+                <a href="Lovelit-Support.html">Support</a>
+            </nav>
+            <div class="highlight">
+                Lovelit is a couples’ daily journal. Your moments, photos, dates, and quotes stay on this device by default. We do not upload private content.
+            </div>
+            <h2>1. Who we are</h2>
+            <p>This policy is issued by the Lovelit team (“we,” “us”). It explains how we collect, use, store, and protect information when you use the Lovelit iOS app.</p>
+            <h2>2. Information we process</h2>
+            <p>To provide journaling, calendar, reminders, and personalization, the app may process the information below. Except for feedback you choose to send us, this data is stored on your device by default:</p>
+            <ul>
+                <li><strong>Content you create:</strong> daily notes, moments, captions, moods, anniversaries, romantic scene checklists, saved quotes, your nickname and partner nickname, your together-since date, and optional location text you type (not system GPS).</li>
+                <li><strong>Photos:</strong> images you pick from the library and attach to a moment. They are saved as JPEG files in the app sandbox Documents folder and are not synced to our servers.</li>
+                <li><strong>Device identifier:</strong> an anonymous device ID (<code>dev_id</code>) generated and stored in the iOS Keychain to recognize this installation. It is used only for on-device features, not for advertising.</li>
+                <li><strong>Preferences:</strong> language, Face ID, background blur, reminder toggles, and the anonymous analytics switch, stored in UserDefaults on this device.</li>
+                <li><strong>Feedback (optional):</strong> text and contact details you enter in Help &amp; Feedback. We use them only to address your request. The current version mainly confirms submission on device.</li>
+            </ul>
+            <h2>3. What we do not collect by default</h2>
+            <ul>
+                <li>No account sign-up is required. We do not collect legal names, ID numbers, or payment details.</li>
+                <li>We do not access contacts or the microphone, and we do not continuously collect precise GPS in the background.</li>
+                <li>We do not sell or share your couple journal or photos with advertising platforms.</li>
+                <li>Anonymous analytics is off by default. Even if you turn it on, diary text and photos are not uploaded.</li>
+            </ul>
+            <h2>4. System permissions</h2>
+            <p>We request permission only when a feature needs it and you agree:</p>
+            <ul>
+                <li><strong>Photo Library:</strong> to attach photos to moments.</li>
+                <li><strong>Notifications:</strong> for anniversary and daily-note reminders (local notifications).</li>
+                <li><strong>Face ID / biometrics (optional):</strong> to unlock the app on this device. Biometric data is held by iOS; we cannot read it.</li>
+            </ul>
+            <p>You can turn these off in iOS Settings at any time. Related features may stop working; your other local records remain.</p>
+            <h2>5. How we use information</h2>
+            <ul>
+                <li>To show countdowns, the love calendar, badges, the quote library, and romantic plans on this device.</li>
+                <li>To send local reminders at the times you set.</li>
+                <li>To protect private content when Face ID is enabled.</li>
+                <li>To improve the product if you send feedback or enable anonymous analytics.</li>
+            </ul>
+            <h2>6. Storage and retention</h2>
+            <p>Notes, photos, and settings live on your iPhone. Uninstalling the app or using Clear Local Cache may delete this data permanently. The Keychain device ID may remain after uninstall until you reset the device or we provide a deletion path.</p>
+            <p>We do not offer cloud account sync. If you use iCloud device backup, that backup is handled by Apple under Apple’s privacy policy.</p>
+            <h2>7. Sharing</h2>
+            <p>We do not sell your personal information. We may disclose information only:</p>
+            <ul>
+                <li>with your clear consent;</li>
+                <li>when required by law or a competent authority;</li>
+                <li>when necessary to protect vital rights of users or the public.</li>
+            </ul>
+            <p>The in-app Share action uses the system share sheet. The third-party app you choose receives only what you select and is governed by that party’s policies.</p>
+            <h2>8. Children</h2>
+            <p>Lovelit is intended for adult couples. We do not knowingly collect personal information from children under 13 (or the higher age required where you live). If you are a parent or guardian and believe we have such data, contact us and we will delete it promptly.</p>
+            <h2>9. Your choices</h2>
+            <ul>
+                <li>View, edit, or delete records and photos inside the app.</li>
+                <li>Turn off notifications, Face ID, or anonymous analytics, or clear local cache.</li>
+                <li>Revoke Photo Library and notification access in iOS Settings.</li>
+                <li>Email us to review or delete feedback you previously sent.</li>
+            </ul>
+            <h2>10. Policy updates</h2>
+            <p>We may update this policy and will post the new effective date on this page. If a change materially affects your rights, we will provide a reasonable in-app or other notice.</p>
+            <h2>11. Contact</h2>
+            <p>Questions about this policy or your information:</p>
+            <p>Email: <a href="mailto:feedback@xindong.daily">feedback@xindong.daily</a></p>
+            <p>App: Lovelit · Version 1.0.0</p>
+            <div class="footer">
+                © 2026 Lovelit<br>
+                This page applies together with the <a href="Lovelit-User-Agreement.html">User Agreement</a> and <a href="Lovelit-Support.html">Support</a>
+            </div>
+        </div>
+
+        <div class="lang-zh">
+            <h1>隐私政策</h1>
+            <p class="meta">
+                生效日期：2026 年 8 月 24 日　·　适用版本：1.0.0 及后续版本<br>
+                应用名称：Lovelit　·　Bundle ID：com.xindong.daily
+            </p>
+            <nav>
+                <a href="Lovelit-User-Agreement.html">用户协议</a>
+                <a href="Lovelit-Support.html">帮助与支持</a>
+            </nav>
+            <div class="highlight">
+                Lovelit 是一款情侣日常记录应用。你们的瞬间、照片、纪念日和文案默认保存在本机，我们不会上传私密内容。
+            </div>
+            <h2>1. 我们是谁</h2>
+            <p>本政策由 Lovelit 运营团队（下称「我们」）制定，说明在你使用 Lovelit iOS 应用时，我们如何收集、使用、存储和保护信息。</p>
+            <h2>2. 我们收集哪些信息</h2>
+            <p>为提供情侣记录、日历、提醒与个性化体验，应用可能处理以下信息。除你主动提交的反馈外，这些数据默认仅存储在你的设备上：</p>
+            <ul>
+                <li><strong>你主动创建的内容：</strong>日常记录、心动瞬间、备注、心情、纪念日、浪漫场景清单、收藏文案、昵称与伴侣昵称、相爱起始日，以及你填写的地点文字（可选，并非系统定位）。</li>
+                <li><strong>照片：</strong>你从相册选择并添加到瞬间的图片，以 JPEG 形式保存在应用沙盒 Documents 目录，不会自动同步到我们的服务器。</li>
+                <li><strong>设备标识：</strong>为识别本机安装，应用会在系统钥匙串（Keychain）中生成并保存一个匿名设备 ID（dev_id）。该标识仅用于本机功能，不用于广告追踪。</li>
+                <li><strong>偏好设置：</strong>语言、Face ID 开关、后台模糊、提醒开关、匿名统计开关等，保存在本机 UserDefaults。</li>
+                <li><strong>反馈（可选）：</strong>你在「帮助与反馈」中填写的内容和联系方式。提交后仅用于处理你的问题；当前版本以本机提交确认为主。</li>
+            </ul>
+            <h2>3. 我们不会默认收集的信息</h2>
+            <ul>
+                <li>不要求注册账号，也不收集真实姓名、身份证号或支付信息。</li>
+                <li>不访问通讯录、麦克风，不在后台持续获取精确 GPS。</li>
+                <li>不向第三方广告平台出售或共享你的情侣记录与照片。</li>
+                <li>「匿名使用统计」默认关闭；即使开启，也不会上传日记正文或照片。</li>
+            </ul>
+            <h2>4. 系统权限</h2>
+            <p>仅在功能需要且经你同意后请求：</p>
+            <ul>
+                <li><strong>相册 / 照片库：</strong>用于为瞬间添加照片。</li>
+                <li><strong>通知：</strong>用于纪念日提醒和每日记录提醒（本地通知）。</li>
+                <li><strong>面容 ID / 生物识别（可选）：</strong>仅用于本机解锁应用，生物特征数据由 iOS 保管，我们无法读取。</li>
+            </ul>
+            <p>你可以随时在 iOS「设置」中关闭上述权限。关闭后，对应功能可能不可用，但不影响其余本地记录。</p>
+            <h2>5. 信息如何使用</h2>
+            <ul>
+                <li>在本机展示首页倒计时、恋爱日历、勋章、文案库与浪漫计划。</li>
+                <li>按你设定的时间发送本地提醒。</li>
+                <li>在你开启 Face ID 时保护应用内私密内容。</li>
+                <li>改进产品体验（仅在你自愿反馈或开启匿名统计时）。</li>
+            </ul>
+            <h2>6. 存储与保留</h2>
+            <p>记录、照片与设置保存在你的 iPhone 本地。卸载应用或使用「清除本地缓存」后，本机数据可能被删除且无法恢复。钥匙串中的设备 ID 可能在卸载后仍由系统保留，直到你重置设备或我们提供删除入口。</p>
+            <p>我们不提供云端账号同步。请自行通过系统备份（如你启用的 iCloud 设备备份）保护数据；该备份由 Apple 处理，适用 Apple 的隐私政策。</p>
+            <h2>7. 信息共享</h2>
+            <p>我们不会出售你的个人信息。仅在以下情况可能披露：</p>
+            <ul>
+                <li>获得你的明确同意；</li>
+                <li>法律法规或有权机关依法要求；</li>
+                <li>为保护用户或公众的重大合法权益所必需。</li>
+            </ul>
+            <p>应用内「分享」功能会调用系统分享面板，由你选择的第三方 App 接收你选中的文案，适用该第三方的政策。</p>
+            <h2>8. 未成年人</h2>
+            <p>Lovelit 面向成年用户的情侣记录场景。我们不会故意收集未满 13 周岁（或你所在地法律规定的更高年龄）儿童的个人信息。若你是监护人并发现相关数据，请联系我们，我们将尽快删除。</p>
+            <h2>9. 你的权利</h2>
+            <ul>
+                <li>在应用内查看、编辑或删除你创建的记录与照片。</li>
+                <li>关闭通知、Face ID、匿名统计，或清除本地缓存。</li>
+                <li>通过系统设置撤销相册、通知等权限。</li>
+                <li>发送邮件要求了解或删除你曾主动提交的反馈。</li>
+            </ul>
+            <h2>10. 政策更新</h2>
+            <p>我们可能适时修订本政策。更新后会在本页面公布生效日期。若变更实质影响你的权利，我们将通过应用内说明或其他合理方式提示。</p>
+            <h2>11. 联系我们</h2>
+            <p>如对本政策或个人信息处理有疑问，请联系：</p>
+            <p>邮箱：<a href="mailto:feedback@xindong.daily">feedback@xindong.daily</a></p>
+            <p>应用：Lovelit　·　版本 1.0.0</p>
+            <div class="footer">
+                © 2026 Lovelit<br>
+                本页与 <a href="Lovelit-User-Agreement.html">用户协议</a>、<a href="Lovelit-Support.html">帮助与支持</a> 一并适用于本应用
+            </div>
+        </div>
+    </div>
+    <script src="lovelit-i18n.js"></script>
+</body>
+</html>
