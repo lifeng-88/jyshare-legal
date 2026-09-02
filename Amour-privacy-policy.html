@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amour（恋爱指南）隐私政策 · Amour Privacy Policy">
+  <title>Amour 隐私政策</title>
+  <style>
+    :root {
+      --primary: #A03B56;
+      --primary-light: #F8E8ED;
+      --text: #1C1B1F;
+      --text-muted: #5C5A62;
+      --bg: #FFFBFE;
+      --card: #FFFFFF;
+      --border: #E8E0E4;
+      --radius: 16px;
+      --max-width: 720px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    html[data-lang="zh"] [lang="en"],
+    html[data-lang="en"] [lang="zh"] { display: none !important; }
+    header {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, #C45672 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 16px;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 14px; opacity: 0.9; }
+    .lang-switch {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: inline-flex;
+      gap: 2px;
+      padding: 3px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+    }
+    .lang-switch button {
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      border-radius: 999px;
+      padding: 7px 13px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lang-switch button[aria-pressed="true"] {
+      background: #fff;
+      color: var(--primary);
+    }
+    main {
+      max-width: var(--max-width);
+      margin: -24px auto 48px;
+      padding: 0 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: 0 4px 24px rgba(160, 59, 86, 0.08);
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 700;
+      margin: 28px 0 10px;
+    }
+    h2:first-child { margin-top: 0; }
+    p, li { color: var(--text); margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { color: var(--text-muted); }
+    .muted { color: var(--text-muted); font-size: 14px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      padding: 24px 16px 40px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer nav { margin-top: 8px; }
+    footer nav a { margin: 0 10px; }
+  </style>
+  <script>
+    (function () {
+      var STORAGE_KEY = 'amour-lang';
+      var TITLES = { zh: 'Amour 隐私政策', en: 'Amour Privacy Policy' };
+
+      function preferred() {
+        var fromQuery = (location.search.match(/[?&]lang=(zh|en)(?:&|$)/) || [])[1];
+        if (fromQuery) return fromQuery;
+        try {
+          var saved = localStorage.getItem(STORAGE_KEY);
+          if (saved === 'zh' || saved === 'en') return saved;
+        } catch (e) {}
+        return /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
+      }
+
+      function paint(lang) {
+        var root = document.documentElement;
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+        document.title = TITLES[lang];
+      }
+
+      // Carry the choice across the sibling legal pages and keep the toggle in sync.
+      function sync(lang) {
+        document.querySelectorAll('[data-set-lang]').forEach(function (button) {
+          button.setAttribute('aria-pressed', String(button.getAttribute('data-set-lang') === lang));
+        });
+        document.querySelectorAll('a[href]').forEach(function (link) {
+          var url;
+          try { url = new URL(link.href, location.href); } catch (e) { return; }
+          if (!/\.html$/i.test(url.pathname)) return;
+          url.searchParams.set('lang', lang);
+          link.href = url.href;
+        });
+      }
+
+      function setLang(lang) {
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        paint(lang);
+        sync(lang);
+      }
+
+      paint(preferred());
+
+      document.addEventListener('DOMContentLoaded', function () {
+        sync(document.documentElement.getAttribute('data-lang'));
+        document.addEventListener('click', function (event) {
+          var button = event.target.closest('[data-set-lang]');
+          if (button) setLang(button.getAttribute('data-set-lang'));
+        });
+      });
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <div class="logo">♥</div>
+    <h1 lang="zh">Amour 隐私政策</h1>
+    <h1 lang="en">Amour Privacy Policy</h1>
+    <p lang="zh">恋爱指南 · 最后更新：2026 年 8 月 29 日</p>
+    <p lang="en">Love Guide · Last updated: August 29, 2026</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <p class="muted" lang="zh">
+        欢迎使用 Amour（中文名「恋爱指南」，以下简称「本应用」或「我们」）。我们重视您的隐私，并希望通过本政策说明我们如何收集、使用、存储与保护您的信息。
+      </p>
+      <p class="muted" lang="en">
+        Welcome to Amour (known in Chinese as「恋爱指南」, hereinafter “the App” or “we”). We respect your privacy, and this policy explains how we collect, use, store and protect your information.
+      </p>
+
+      <h2 lang="zh">1. 适用范围</h2>
+      <h2 lang="en">1. Scope</h2>
+      <p lang="zh">本隐私政策适用于 Amour iOS 应用程序及其提供的相关功能与服务。使用本应用即表示您已阅读并理解本政策。</p>
+      <p lang="en">This Privacy Policy applies to the Amour iOS application and the features and services it provides. By using the App, you confirm that you have read and understood this policy.</p>
+
+      <h2 lang="zh">2. 我们收集的信息</h2>
+      <h2 lang="en">2. Information We Collect</h2>
+      <p lang="zh">本应用以<strong>本地存储为主</strong>，不会要求您注册账号。我们可能涉及以下信息：</p>
+      <p lang="en">The App is <strong>primarily local-storage based</strong> and does not require you to register an account. The following information may be involved:</p>
+      <ul lang="zh">
+        <li><strong>您主动填写的内容</strong>：情侣昵称、纪念日备注、甜蜜清单、心情日记、个人资料等。</li>
+        <li><strong>您选择的照片</strong>：当您设置情侣头像时，您从系统相册中选取的图片（仅在您授权后访问）。</li>
+        <li><strong>应用偏好设置</strong>：语言选择、通知开关等本地配置。</li>
+        <li><strong>设备信息（有限）</strong>：为维持应用正常运行，系统可能提供基础设备与系统版本信息；本应用当前版本<strong>不会</strong>主动上传此类信息至我们的服务器。</li>
+      </ul>
+      <ul lang="en">
+        <li><strong>Content you enter</strong>: couple nicknames, anniversary notes, sweet checklists, mood journals, profile details and similar entries.</li>
+        <li><strong>Photos you select</strong>: images you pick from your system photo library when setting a couple avatar (accessed only after you grant permission).</li>
+        <li><strong>App preferences</strong>: local settings such as your language choice and notification toggles.</li>
+        <li><strong>Limited device information</strong>: the system may supply basic device and OS version details so the App can run correctly. The current version <strong>does not</strong> upload such information to our servers.</li>
+      </ul>
+
+      <h2 lang="zh">3. 系统权限说明</h2>
+      <h2 lang="en">3. System Permissions</h2>
+      <ul lang="zh">
+        <li><strong>相册（读取）</strong>：用于选择情侣头像照片。仅在您主动操作时请求访问。</li>
+        <li><strong>相册（写入）</strong>：用于将恋爱成就海报保存至您的照片图库。仅在您点击保存时请求访问。</li>
+      </ul>
+      <ul lang="en">
+        <li><strong>Photo library (read)</strong>: used to choose a couple avatar. Access is requested only when you actively start the action.</li>
+        <li><strong>Photo library (write)</strong>: used to save achievement posters to your photo library. Access is requested only when you tap save.</li>
+      </ul>
+      <p lang="zh">您可以在 iOS「设置 → 隐私与安全性 → 照片」中随时管理或撤销授权。</p>
+      <p lang="en">You can manage or revoke these permissions at any time under iOS Settings → Privacy &amp; Security → Photos.</p>
+
+      <h2 lang="zh">4. 信息的使用方式</h2>
+      <h2 lang="en">4. How We Use Information</h2>
+      <p lang="zh">我们收集的信息仅用于：</p>
+      <p lang="en">The information we collect is used solely to:</p>
+      <ul lang="zh">
+        <li>在本设备上展示和管理您的恋爱记录与个性化内容；</li>
+        <li>提供清单、日记、攻略、测验等功能体验；</li>
+        <li>根据您的设置保存语言偏好与通知选项；</li>
+        <li>在您明确操作时，保存分享海报至相册。</li>
+      </ul>
+      <ul lang="en">
+        <li>display and manage your relationship records and personalized content on this device;</li>
+        <li>power features such as checklists, journals, guides and quizzes;</li>
+        <li>remember your language preference and notification options;</li>
+        <li>save share posters to your photo library when you explicitly ask for it.</li>
+      </ul>
+      <p lang="zh">我们不会将您的恋爱记录用于广告定向，也不会出售您的个人信息。</p>
+      <p lang="en">We do not use your relationship records for ad targeting, and we do not sell your personal information.</p>
+
+      <h2 lang="zh">5. 信息存储与安全</h2>
+      <h2 lang="en">5. Storage and Security</h2>
+      <ul lang="zh">
+        <li>您的清单、日记、资料及头像文件<strong>默认保存在您的设备本地</strong>。</li>
+        <li>当前版本<strong>不会</strong>将您的情侣记忆同步或上传至我们的云端服务器。</li>
+        <li>卸载本应用或清除应用数据可能导致本地内容无法恢复，请自行做好备份（如保存重要照片或截图）。</li>
+      </ul>
+      <ul lang="en">
+        <li>Your checklists, journals, profile details and avatar files are <strong>stored locally on your device by default</strong>.</li>
+        <li>The current version <strong>does not</strong> sync or upload your shared memories to our cloud servers.</li>
+        <li>Uninstalling the App or clearing its data may make local content unrecoverable, so please keep your own backups (for example, save important photos or screenshots).</li>
+      </ul>
+
+      <h2 lang="zh">6. 第三方服务</h2>
+      <h2 lang="en">6. Third-Party Services</h2>
+      <p lang="zh">当前版本不集成第三方广告 SDK，也不向第三方共享您的个人恋爱数据。若未来版本引入第三方分析或云服务，我们将更新本政策并在应用内告知。</p>
+      <p lang="en">The current version does not integrate third-party advertising SDKs and does not share your personal relationship data with third parties. If a future version introduces third-party analytics or cloud services, we will update this policy and notify you within the App.</p>
+
+      <h2 lang="zh">7. 您的权利</h2>
+      <h2 lang="en">7. Your Rights</h2>
+      <p lang="zh">您有权：</p>
+      <p lang="en">You have the right to:</p>
+      <ul lang="zh">
+        <li>在应用内编辑或删除自定义清单项、日记条目及个人资料；</li>
+        <li>重置情侣头像，恢复为默认演示头像；</li>
+        <li>在系统设置中撤销相册等权限；</li>
+        <li>通过卸载应用删除存储在本设备上的全部应用数据。</li>
+      </ul>
+      <ul lang="en">
+        <li>edit or delete custom checklist items, journal entries and profile details inside the App;</li>
+        <li>reset couple avatars back to the default sample images;</li>
+        <li>revoke photo library and other permissions in system settings;</li>
+        <li>remove all App data stored on this device by uninstalling the App.</li>
+      </ul>
+
+      <h2 lang="zh">8. 未成年人保护</h2>
+      <h2 lang="en">8. Protection of Minors</h2>
+      <p lang="zh">本应用面向年满 13 周岁的用户。若您未满法定年龄，请在监护人同意与指导下使用。我们不会有意收集未成年人的个人信息。</p>
+      <p lang="en">The App is intended for users aged 13 and above. If you are under the age of majority, please use it with the consent and guidance of a guardian. We do not knowingly collect personal information from minors.</p>
+
+      <h2 lang="zh">9. 政策更新</h2>
+      <h2 lang="en">9. Policy Updates</h2>
+      <p lang="zh">我们可能适时修订本隐私政策。更新后的版本将注明「最后更新」日期。重大变更时，我们将在应用内或通过其他合理方式提醒您查阅。</p>
+      <p lang="en">We may revise this Privacy Policy from time to time. Updated versions will carry a new “last updated” date. For significant changes, we will remind you to review the policy within the App or by other reasonable means.</p>
+
+      <h2 lang="zh">10. 联系我们</h2>
+      <h2 lang="en">10. Contact Us</h2>
+      <p lang="zh">如对本隐私政策有任何疑问、意见或请求，请通过以下方式联系我们：</p>
+      <p lang="en">If you have any questions, comments or requests regarding this Privacy Policy, please get in touch:</p>
+      <p lang="zh">电子邮箱：<a href="mailto:support@amour.app">support@amour.app</a></p>
+      <p lang="en">Email: <a href="mailto:support@amour.app">support@amour.app</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Amour. All rights reserved.</p>
+    <nav>
+      <a href="Amour-terms-of-service.html" lang="zh">用户协议</a>
+      <a href="Amour-terms-of-service.html" lang="en">Terms of Service</a>
+      <a href="Amour-support.html" lang="zh">技术支持</a>
+      <a href="Amour-support.html" lang="en">Support</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Amour（恋爱指南）技术支持与帮助 · Amour Support &amp; Help">
+  <title>Amour 技术支持</title>
+  <style>
+    :root {
+      --primary: #A03B56;
+      --primary-light: #F8E8ED;
+      --text: #1C1B1F;
+      --text-muted: #5C5A62;
+      --bg: #FFFBFE;
+      --card: #FFFFFF;
+      --border: #E8E0E4;
+      --radius: 16px;
+      --max-width: 720px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    html[data-lang="zh"] [lang="en"],
+    html[data-lang="en"] [lang="zh"] { display: none !important; }
+    header {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary) 0%, #C45672 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 16px;
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    header h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 14px; opacity: 0.9; }
+    .lang-switch {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      display: inline-flex;
+      gap: 2px;
+      padding: 3px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 999px;
+    }
+    .lang-switch button {
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1;
+      color: #fff;
+      background: transparent;
+      border: 0;
+      border-radius: 999px;
+      padding: 7px 13px;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .lang-switch button[aria-pressed="true"] {
+      background: #fff;
+      color: var(--primary);
+    }
+    main {
+      max-width: var(--max-width);
+      margin: -24px auto 48px;
+      padding: 0 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 24px rgba(160, 59, 86, 0.08);
+    }
+    h2 {
+      color: var(--primary);
+      font-size: 17px;
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 18px 0 6px;
+      color: var(--text);
+    }
+    p, li { margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 8px; }
+    li { color: var(--text-muted); }
+    .muted { color: var(--text-muted); font-size: 14px; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-box {
+      background: var(--primary-light);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 8px;
+    }
+    .contact-box a {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 8px 16px 40px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer nav { margin-top: 8px; }
+    footer nav a { margin: 0 10px; }
+  </style>
+  <script>
+    (function () {
+      var STORAGE_KEY = 'amour-lang';
+      var TITLES = { zh: 'Amour 技术支持', en: 'Amour Support' };
+
+      function preferred() {
+        var fromQuery = (location.search.match(/[?&]lang=(zh|en)(?:&|$)/) || [])[1];
+        if (fromQuery) return fromQuery;
+        try {
+          var saved = localStorage.getItem(STORAGE_KEY);
+          if (saved === 'zh' || saved === 'en') return saved;
+        } catch (e) {}
+        return /^zh/i.test(navigator.language || '') ? 'zh' : 'en';
+      }
+
+      function paint(lang) {
+        var root = document.documentElement;
+        root.setAttribute('data-lang', lang);
+        root.setAttribute('lang', lang === 'zh' ? 'zh-Hans' : 'en');
+        document.title = TITLES[lang];
+      }
+
+      // Carry the choice across the sibling legal pages and keep the toggle in sync.
+      function sync(lang) {
+        document.querySelectorAll('[data-set-lang]').forEach(function (button) {
+          button.setAttribute('aria-pressed', String(button.getAttribute('data-set-lang') === lang));
+        });
+        document.querySelectorAll('a[href]').forEach(function (link) {
+          var url;
+          try { url = new URL(link.href, location.href); } catch (e) { return; }
+          if (!/\.html$/i.test(url.pathname)) return;
+          url.searchParams.set('lang', lang);
+          link.href = url.href;
+        });
+      }
+
+      function setLang(lang) {
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+        paint(lang);
+        sync(lang);
+      }
+
+      paint(preferred());
+
+      document.addEventListener('DOMContentLoaded', function () {
+        sync(document.documentElement.getAttribute('data-lang'));
+        document.addEventListener('click', function (event) {
+          var button = event.target.closest('[data-set-lang]');
+          if (button) setLang(button.getAttribute('data-set-lang'));
+        });
+      });
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-set-lang="en" aria-pressed="false">EN</button>
+    </div>
+    <div class="logo">♥</div>
+    <h1 lang="zh">Amour 技术支持</h1>
+    <h1 lang="en">Amour Support</h1>
+    <p lang="zh">恋爱指南 · 我们随时为您提供帮助</p>
+    <p lang="en">Love Guide · We’re here to help</p>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2 lang="zh">关于 Amour</h2>
+      <h2 lang="en">About Amour</h2>
+      <p lang="zh">
+        <strong>Amour</strong>（中文名「恋爱指南」）是一款帮助情侣记录恋爱瞬间、管理甜蜜清单、撰写心情日记，并提供恋爱攻略与约会灵感的 iOS 应用。
+      </p>
+      <p lang="en">
+        <strong>Amour</strong> (known in Chinese as「恋爱指南」) is an iOS app that helps couples capture the moments they share, manage sweet checklists, keep mood journals, and find relationship guides and date inspiration.
+      </p>
+      <p>
+        <span class="badge">iOS 15.0+</span>
+        <span class="badge">iPhone</span>
+        <span class="badge">简体中文 / English</span>
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 lang="zh">常见问题</h2>
+      <h2 lang="en">Frequently Asked Questions</h2>
+
+      <h3 lang="zh">如何切换语言？</h3>
+      <h3 lang="en">How do I change the language?</h3>
+      <p lang="zh">打开 App →「我的」→「设置中心」→「语言」，可选择跟随系统、简体中文或 English。</p>
+      <p lang="en">Open the App → Profile → Settings → Language, then choose Follow System, 简体中文 or English.</p>
+
+      <h3 lang="zh">我的数据保存在哪里？</h3>
+      <h3 lang="en">Where is my data stored?</h3>
+      <p lang="zh">您的清单、日记、个人资料及头像均保存在本设备本地，当前版本不会上传至云端。卸载应用将删除本地数据，请提前备份重要内容。</p>
+      <p lang="en">Your checklists, journals, profile details and avatars are all kept locally on this device, and the current version does not upload them to the cloud. Uninstalling the App deletes that local data, so back up anything important beforehand.</p>
+
+      <h3 lang="zh">如何更换情侣头像？</h3>
+      <h3 lang="en">How do I change the couple avatars?</h3>
+      <p lang="zh">进入「我的」→「编辑资料」→ 点击头像 → 从相册选择照片。首次使用需允许访问照片图库。</p>
+      <p lang="en">Go to Profile → Edit Profile → tap an avatar → choose a photo from your library. The first time, you will need to allow access to your photo library.</p>
+
+      <h3 lang="zh">如何保存成就分享海报？</h3>
+      <h3 lang="en">How do I save an achievement poster?</h3>
+      <p lang="zh">在成就分享页面点击「保存到相册」，首次保存需授权写入照片权限。</p>
+      <p lang="en">On the achievement sharing screen, tap “Save to Photos”. The first save requires permission to write to your photo library.</p>
+
+      <h3 lang="zh">如何删除清单或日记？</h3>
+      <h3 lang="en">How do I delete a checklist item or journal entry?</h3>
+      <p lang="zh">在清单项上左滑可删除自定义目标；在日记详情页可删除对应条目。</p>
+      <p lang="en">Swipe left on a checklist item to delete a custom goal, or open a journal entry’s detail page to delete it.</p>
+
+      <h3 lang="zh">通知提醒没有生效？</h3>
+      <h3 lang="en">Notifications aren’t coming through</h3>
+      <p lang="zh">请确认已在 iOS「设置 → 通知 → Amour」中开启通知权限，并在 App 内「通知设置」中打开相应开关。</p>
+      <p lang="en">Check that notifications are enabled under iOS Settings → Notifications → Amour, and that the matching toggles are switched on under Notification Settings inside the App.</p>
+
+      <h3 lang="zh">攻略内容可以离线阅读吗？</h3>
+      <h3 lang="en">Can I read the guides offline?</h3>
+      <p lang="zh">可以。攻略文章与封面均已内置在应用中，无需联网即可浏览。</p>
+      <p lang="en">Yes. Guide articles and their cover images are bundled with the App, so you can browse them without a network connection.</p>
+    </div>
+
+    <div class="card">
+      <h2 lang="zh">系统要求</h2>
+      <h2 lang="en">System Requirements</h2>
+      <ul lang="zh">
+        <li>设备：iPhone（不支持 iPad）</li>
+        <li>系统：iOS 15.0 或更高版本</li>
+        <li>存储空间：建议预留 50 MB 以上</li>
+        <li>网络：核心功能可离线使用；部分未来功能可能需要网络</li>
+      </ul>
+      <ul lang="en">
+        <li>Device: iPhone (iPad is not supported)</li>
+        <li>OS: iOS 15.0 or later</li>
+        <li>Storage: at least 50 MB of free space recommended</li>
+        <li>Network: core features work offline; some future features may need a connection</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2 lang="zh">联系我们</h2>
+      <h2 lang="en">Contact Us</h2>
+      <p lang="zh">遇到问题、有功能建议或需要协助？欢迎通过邮件联系我们，我们将在 1–3 个工作日内回复。</p>
+      <p lang="en">Run into a problem, have a feature suggestion, or need a hand? Email us and we will reply within 1–3 business days.</p>
+      <div class="contact-box">
+        <p class="muted" style="margin-bottom: 6px;" lang="zh">技术支持邮箱</p>
+        <p class="muted" style="margin-bottom: 6px;" lang="en">Support email</p>
+        <a href="mailto:support@amour.app">support@amour.app</a>
+      </div>
+      <p class="muted" style="margin-top: 16px;" lang="zh">
+        反馈问题时请附上：设备型号、iOS 版本、App 版本，以及问题描述或截图，以便我们更快定位问题。
+      </p>
+      <p class="muted" style="margin-top: 16px;" lang="en">
+        When reporting an issue, please include your device model, iOS version, App version, and a description or screenshot so we can track it down faster.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 lang="zh">相关文档</h2>
+      <h2 lang="en">Related Documents</h2>
+      <ul lang="zh">
+        <li><a href="Amour-privacy-policy.html">Amour 隐私政策</a></li>
+        <li><a href="Amour-terms-of-service.html">Amour 用户协议</a></li>
+      </ul>
+      <ul lang="en">
+        <li><a href="Amour-privacy-policy.html">Amour Privacy Policy</a></li>
+        <li><a href="Amour-terms-of-service.html">Amour Terms of Service</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Amour · Version 1.0</p>
+    <nav>
+      <a href="Amour-privacy-policy.html" lang="zh">隐私政策</a>
+      <a href="Amour-privacy-policy.html" lang="en">Privacy Policy</a>
+      <a href="Amour-terms-of-service.html" lang="zh">用户协议</a>
+      <a href="Amour-terms-of-service.html" lang="en">Terms of Service</a>
+    </nav>
+  </footer>
+</body>
+</html>
