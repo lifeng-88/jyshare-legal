@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlumniRecord — Support</title>
+  <style>
+    :root {
+      --paper: #f7f1e8;
+      --ink: #3b3830;
+      --ink-soft: #6e675b;
+      --sage: #6b7b63;
+      --sage-mist: #e9ede3;
+      --blush-mist: #f0ded9;
+      --outline: #d5cbb8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    .wash {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(228, 200, 196, 0.5), transparent 40%),
+        radial-gradient(circle at 92% 30%, rgba(168, 176, 154, 0.3), transparent 42%);
+      z-index: 0;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header { text-align: center; margin-bottom: 28px; }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--blush-mist);
+      color: var(--sage);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    h1 { margin: 0 0 8px; font-size: 1.65rem; color: var(--sage); font-weight: 700; }
+    .subtitle { color: var(--ink-soft); margin: 0 0 6px; }
+    .meta { color: var(--ink-soft); font-size: 0.92rem; }
+    section {
+      background: rgba(255, 252, 246, 0.85);
+      border: 1px solid var(--outline);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(59, 56, 48, 0.06);
+    }
+    h2 { margin: 0 0 12px; font-size: 1.08rem; color: var(--sage); }
+    p, li, dd { margin: 0 0 10px; color: var(--ink-soft); }
+    ul { margin: 0 0 8px 1.2em; padding: 0; }
+    dl { margin: 0; }
+    dt { font-weight: 600; color: var(--ink); margin-top: 12px; }
+    dt:first-child { margin-top: 0; }
+    a { color: var(--sage); }
+    .cta {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--sage);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer { margin-top: 24px; text-align: center; font-size: 0.88rem; color: var(--ink-soft); }
+  </style>
+</head>
+<body>
+  <div class="wash" aria-hidden="true"></div>
+  <main>
+    <header>
+      <div class="badge">AlumniRecord</div>
+      <h1>Support &amp; FAQ</h1>
+      <p class="meta">A digital yearbook for your class — photos, notes, and the people behind them.</p>
+    </header>
+
+    <section>
+      <h2>Contact</h2>
+      <p>
+        For bugs, feedback, or privacy questions, email:
+        <br><strong><a href="mailto:support@memories24.app">support@memories24.app</a></strong>
+      </p>
+      <p>We aim to reply within 3–5 business days.</p>
+      <a class="cta" href="mailto:support@memories24.app?subject=AlumniRecord%20Support">Email Support</a>
+    </section>
+
+    <section>
+      <h2>When reporting an issue, please include</h2>
+      <ul>
+        <li>Device model (e.g. iPhone 15)</li>
+        <li>iOS version</li>
+        <li>App version (Me → About AlumniRecord)</li>
+        <li>Steps to reproduce and screenshots if available</li>
+        <li><strong>dev_id</strong> (optional): tap the version row on the About screen 10 times to copy an anonymous device ID stored in Keychain</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+      <dl>
+        <dt>Do I need an account?</dt>
+        <dd>No. You can use the App without registering.</dd>
+
+        <dt>How do I add a memory or classmate?</dt>
+        <dd>Tap “+” on the Gallery or Classmates tab, pick a photo, fill in the details, and save.</dd>
+
+        <dt>How do I edit or delete content?</dt>
+        <dd>Open the detail view, tap “⋯”, or long-press a card. You can edit or delete items you created. Built-in sample content cannot be deleted.</dd>
+
+        <dt>Why can't I save to the photo library?</dt>
+        <dd>Check iOS Settings → Privacy → Photos and allow AlumniRecord to add photos.</dd>
+
+        <dt>How do I change the language?</dt>
+        <dd>Go to Me → Language and choose English or Traditional Chinese.</dd>
+
+        <dt>Video won't play — what should I try?</dt>
+        <dd>Ensure iOS 15 or later, restart the App, and email support with your dev_id and a description if the issue persists.</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="Memories24-privacy-policy.en.html">Privacy Policy</a></li>
+        <li><a href="Memories24-terms-of-use.en.html">Terms of Use</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      © 2026 AlumniRecord · com.memories.app
+    </footer>
+  </main>
+</body>
+</html>

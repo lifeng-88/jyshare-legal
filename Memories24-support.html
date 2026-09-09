@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AlumniRecord — Support</title>
+  <style>
+    :root {
+      --paper: #f7f1e8;
+      --ink: #3b3830;
+      --ink-soft: #6e675b;
+      --sage: #6b7b63;
+      --sage-mist: #e9ede3;
+      --blush-mist: #f0ded9;
+      --outline: #d5cbb8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Helvetica Neue", sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+    .wash {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(228, 200, 196, 0.5), transparent 40%),
+        radial-gradient(circle at 92% 30%, rgba(168, 176, 154, 0.3), transparent 42%);
+      z-index: 0;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    header { text-align: center; margin-bottom: 28px; }
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--blush-mist);
+      color: var(--sage);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    h1 { margin: 0 0 8px; font-size: 1.65rem; color: var(--sage); font-weight: 700; }
+    .subtitle { color: var(--ink-soft); margin: 0 0 6px; }
+    .meta { color: var(--ink-soft); font-size: 0.92rem; }
+    section {
+      background: rgba(255, 252, 246, 0.85);
+      border: 1px solid var(--outline);
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 16px;
+      box-shadow: 0 8px 24px rgba(59, 56, 48, 0.06);
+    }
+    h2 { margin: 0 0 12px; font-size: 1.08rem; color: var(--sage); }
+    h3 { margin: 16px 0 8px; font-size: 1rem; color: var(--ink); }
+    p, li, dd { margin: 0 0 10px; color: var(--ink-soft); }
+    ul { margin: 0 0 8px 1.2em; padding: 0; }
+    dl { margin: 0; }
+    dt { font-weight: 600; color: var(--ink); margin-top: 12px; }
+    dt:first-child { margin-top: 0; }
+    a { color: var(--sage); }
+    .cta {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--sage);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer { margin-top: 24px; text-align: center; font-size: 0.88rem; color: var(--ink-soft); }
+    .en { font-size: 0.94rem; opacity: 0.92; }
+  </style>
+</head>
+<body>
+  <div class="wash" aria-hidden="true"></div>
+  <main>
+    <header>
+      <div class="badge">AlumniRecord</div>
+      <h1>支援與常見問題</h1>
+      <p class="subtitle">Support &amp; FAQ</p>
+      <p class="meta">A digital yearbook for your class — photos, notes, and the people behind them.</p>
+    </header>
+
+    <section>
+      <h2>聯絡我們 · Contact</h2>
+      <p>
+        遇到問題、功能建議或資料相關疑問，請寄信至：
+        <br><strong><a href="mailto:support@memories24.app">support@memories24.app</a></strong>
+      </p>
+      <p class="en">
+        For bugs, feedback, or privacy questions, email us at the address above.
+        We aim to reply within 3–5 business days.
+      </p>
+      <a class="cta" href="mailto:support@memories24.app?subject=AlumniRecord%20Support">寄信給支援 · Email Support</a>
+    </section>
+
+    <section>
+      <h2>回報問題時請提供 · When reporting an issue</h2>
+      <ul>
+        <li>裝置型號（例如 iPhone 15）</li>
+        <li>iOS 版本</li>
+        <li>App 版本（「我的 → 關於 AlumniRecord」）</li>
+        <li>問題步驟與截圖（如有）</li>
+        <li><strong>dev_id</strong>（選填）：在「關於」頁面連續點擊版本號 10 次即可複製，有助我們定位裝置端問題</li>
+      </ul>
+      <p class="en">Optional <strong>dev_id</strong>: tap the version row on the About screen 10 times to copy an anonymous device identifier stored in Keychain.</p>
+    </section>
+
+    <section>
+      <h2>常見問題 · FAQ</h2>
+      <dl>
+        <dt>需要註冊帳號嗎？</dt>
+        <dd>不需要。本 App 無需註冊即可使用。</dd>
+
+        <dt>如何新增回憶或同學？</dt>
+        <dd>在「相簿」或「同學」頁面點擊左上角「＋」，選擇照片並填寫資料後儲存即可。</dd>
+
+        <dt>如何編輯或刪除內容？</dt>
+        <dd>在詳情頁點擊「⋯」選單，或長按卡片，可編輯／刪除您自己建立的項目。內建演示資料不可刪除。</dd>
+
+        <dt>為什麼無法儲存到相簿？</dt>
+        <dd>請至 iOS「設定 → 隱私權 → 照片」確認已允許 AlumniRecord 寫入相簿。</dd>
+
+        <dt>如何切換語言？</dt>
+        <dd>前往「我的 → 語言」，選擇 English 或繁體中文。</dd>
+
+        <dt>影片無法播放怎麼辦？</dt>
+        <dd>請確認 iOS 版本為 15 或以上，並重新啟動 App。若仍異常，請附上 dev_id 與問題描述寄信給我們。</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>法律文件 · Legal</h2>
+      <ul>
+        <li><a href="Memories24-privacy-policy.html">隱私政策 · Privacy Policy</a></li>
+        <li><a href="Memories24-terms-of-use.html">用戶協議 · Terms of Use</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      © 2026 AlumniRecord · com.memories.app
+    </footer>
+  </main>
+</body>
+</html>
