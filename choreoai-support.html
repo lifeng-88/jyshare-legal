@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChoreoAI 支持与帮助 / Support</title>
+  <meta name="description" content="ChoreoAI Support — FAQ, contact, and legal links." />
+  <style>
+    :root {
+      --bg: #131318;
+      --surface: #1b1b20;
+      --text: #e4e1e9;
+      --muted: #cfc2d7;
+      --primary: #dcb8ff;
+      --accent: #8a2be2;
+      --pink: #ff479c;
+      --line: rgba(255,255,255,.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(138,43,226,.28), transparent 55%),
+                  radial-gradient(900px 500px at 100% 0%, rgba(255,71,156,.18), transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 48px 20px 80px; }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+    .brand {
+      font-size: 13px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .lang-switch {
+      display: inline-flex;
+      padding: 3px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+    }
+    .lang-switch button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: .85rem;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .lang-switch button.active {
+      background: linear-gradient(90deg, var(--accent), var(--pink));
+      color: #fff;
+    }
+    header { margin-bottom: 36px; }
+    h1 { font-size: 2rem; margin: 0 0 8px; line-height: 1.25; }
+    .meta { color: var(--muted); font-size: .95rem; }
+    .grid {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 640px) {
+      .grid.cards { grid-template-columns: 1fr 1fr; }
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+    }
+    .card h2 {
+      font-size: 1.05rem;
+      margin: 0 0 8px;
+      color: var(--primary);
+    }
+    p, li, dd { color: var(--muted); }
+    a { color: #ffb0ca; }
+    .btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent), var(--pink));
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .92rem;
+    }
+    details {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text);
+    }
+    details p { margin: 10px 0 0; }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: .85rem;
+      text-align: center;
+    }
+    nav.links { display: flex; flex-wrap: wrap; gap: 12px 18px; margin-top: 18px; font-size: .9rem; }
+    dl { margin: 0; }
+    dt { color: var(--text); font-weight: 600; margin-top: 12px; }
+    dt:first-child { margin-top: 0; }
+    dd { margin: 4px 0 0; }
+    html[data-lang="zh"] .lang-en { display: none !important; }
+    html[data-lang="en"] .lang-zh { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">ChoreoAI</div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="zh" class="active">中文</button>
+        <button type="button" data-set-lang="en">English</button>
+      </div>
+    </div>
+
+    <header>
+      <h1 class="lang-zh">支持与帮助</h1>
+      <h1 class="lang-en">Support &amp; Help</h1>
+      <p class="meta lang-zh">我们协助您解决使用问题，并提供政策与联系方式。</p>
+      <p class="meta lang-en">Get help with ChoreoAI, contact us, and find legal documents.</p>
+      <nav class="links">
+        <a class="lang-zh" href="choreoai-privacy-policy.html">隐私政策</a>
+        <a class="lang-zh" href="choreoai-user-agreement.html">用户协议</a>
+        <a class="lang-en" href="choreoai-privacy-policy.html">Privacy Policy</a>
+        <a class="lang-en" href="choreoai-user-agreement.html">User Agreement</a>
+      </nav>
+    </header>
+
+    <div class="grid cards">
+      <section class="card">
+        <h2 class="lang-zh">联系我们</h2>
+        <h2 class="lang-en">Contact</h2>
+        <dl>
+          <dt>Email</dt>
+          <dd><a href="mailto:support@choreoai.app">support@choreoai.app</a></dd>
+          <dt>App</dt>
+          <dd>ChoreoAI（iOS）</dd>
+          <dt>Bundle ID</dt>
+          <dd>com.kinetic.DanceGuideAI</dd>
+          <dt class="lang-zh">响应时间</dt>
+          <dd class="lang-zh">一般在 1–3 个工作日内回复</dd>
+          <dt class="lang-en">Response time</dt>
+          <dd class="lang-en">Usually within 1–3 business days</dd>
+        </dl>
+        <a class="btn lang-zh" href="mailto:support@choreoai.app?subject=ChoreoAI%20Support">发送邮件</a>
+        <a class="btn lang-en" href="mailto:support@choreoai.app?subject=ChoreoAI%20Support">Send Email</a>
+      </section>
+
+      <section class="card">
+        <h2 class="lang-zh">法律信息</h2>
+        <h2 class="lang-en">Legal</h2>
+        <p class="lang-zh">使用本应用前，请阅读：</p>
+        <p class="lang-en">Please review before using the App:</p>
+        <p class="lang-zh">
+          <a href="choreoai-privacy-policy.html">隐私政策</a><br />
+          <a href="choreoai-user-agreement.html">用户协议</a>
+        </p>
+        <p class="lang-en">
+          <a href="choreoai-privacy-policy.html">Privacy Policy</a><br />
+          <a href="choreoai-user-agreement.html">User Agreement</a>
+        </p>
+      </section>
+    </div>
+
+    <section class="card" style="margin-bottom: 20px;">
+      <h2 class="lang-zh">常见问题</h2>
+      <h2 class="lang-en">FAQ</h2>
+
+      <div class="lang-zh">
+        <details open>
+          <summary>AI 练习需要网络吗？</summary>
+          <p>课程封面与在线视频需要网络；部分姿态演示与本地偏好可在弱网或离线环境下浏览。为保证最佳体验，建议在稳定网络下使用。</p>
+        </details>
+        <details>
+          <summary>如何提高动作识别精度？</summary>
+          <p>请先在「相机与姿态追踪校准」中完成校准；保持光线充足、全身入镜，并避免杂乱背景。可在设置中切换前置/后置相机与镜像模式。</p>
+        </details>
+        <details>
+          <summary>为什么应用需要相机权限？</summary>
+          <p>相机仅用于 AI 动作捕捉与实时姿态纠错练习。您可在 iOS「设置 → 隐私与安全性 → 相机」中随时关闭；关闭后相关功能将不可用。</p>
+        </details>
+        <details>
+          <summary>连续打卡如何计算？</summary>
+          <p>每天在「日程」中完成打卡即可累计。若需重置当日打卡状态，可在「账号与偏好」中操作。</p>
+        </details>
+        <details>
+          <summary>视频无法播放怎么办？</summary>
+          <p>请检查网络连接与系统音量，稍后重试。若仍失败，请将设备型号、系统版本、应用版本与问题截图发送至 support@choreoai.app。</p>
+        </details>
+        <details>
+          <summary>如何反馈建议或举报问题？</summary>
+          <p>可在应用内「帮助与 AI 导师反馈」提交，或直接发送邮件至 <a href="mailto:support@choreoai.app">support@choreoai.app</a>，请尽量描述复现步骤。</p>
+        </details>
+      </div>
+
+      <div class="lang-en">
+        <details open>
+          <summary>Does AI Practice require a network?</summary>
+          <p>Course covers and online videos need network access. Some pose demos and local preferences can work offline or on a weak network. For the best experience, use a stable connection.</p>
+        </details>
+        <details>
+          <summary>How can I improve pose recognition accuracy?</summary>
+          <p>Complete Camera &amp; Pose Calibration first. Keep good lighting, stay fully in frame, and avoid cluttered backgrounds. You can switch front/rear camera and mirror mode in settings.</p>
+        </details>
+        <details>
+          <summary>Why does the App need camera permission?</summary>
+          <p>The camera is used only for AI motion capture and real-time posture correction. You can revoke access in iOS Settings → Privacy &amp; Security → Camera; related features will then be unavailable.</p>
+        </details>
+        <details>
+          <summary>How is the streak calculated?</summary>
+          <p>Complete a check-in on the Schedule tab once per day. You can reset today’s check-in from Account &amp; Preferences if needed.</p>
+        </details>
+        <details>
+          <summary>What if a video won’t play?</summary>
+          <p>Check your network and system volume, then try again. If it still fails, email support@choreoai.app with device model, iOS version, app version, and screenshots.</p>
+        </details>
+        <details>
+          <summary>How do I send feedback or report an issue?</summary>
+          <p>Use Help &amp; AI Coach Feedback in the App, or email <a href="mailto:support@choreoai.app">support@choreoai.app</a> with reproduction steps.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="lang-zh">反馈时请提供</h2>
+      <h2 class="lang-en">Please include when contacting us</h2>
+      <ul class="lang-zh">
+        <li>设备型号与 iOS 版本</li>
+        <li>ChoreoAI 应用版本（如 1.0）</li>
+        <li>问题发生时间与复现步骤</li>
+        <li>截图或录屏（如方便）</li>
+      </ul>
+      <ul class="lang-en">
+        <li>Device model and iOS version</li>
+        <li>ChoreoAI app version (e.g. 1.0)</li>
+        <li>When it happened and steps to reproduce</li>
+        <li>Screenshots or screen recording if available</li>
+      </ul>
+    </section>
+
+    <footer>
+      <span class="lang-zh">© 2026 ChoreoAI. 保留所有权利。</span>
+      <span class="lang-en">© 2026 ChoreoAI. All rights reserved.</span>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var KEY = "choreoai.lang";
+      var TITLES = {"zh":"ChoreoAI 支持与帮助","en":"ChoreoAI Support"};
+      function apply(lang) {
+        lang = lang === "en" ? "en" : "zh";
+        document.documentElement.setAttribute("data-lang", lang);
+        document.documentElement.lang = lang === "en" ? "en" : "zh-CN";
+        if (TITLES[lang]) document.title = TITLES[lang];
+        document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-set-lang") === lang);
+        });
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+      }
+      var params = {};
+      try {
+        var q = (location.search || "").replace(/^\?/, "");
+        q.split("&").forEach(function (pair) {
+          if (!pair) return;
+          var p = pair.split("=");
+          params[decodeURIComponent(p[0])] = decodeURIComponent((p[1] || "").replace(/\+/g, " "));
+        });
+      } catch (e) {}
+      if (params.embedded === "1" || window.__CHOREOAI_EMBEDDED__) {
+        document.documentElement.setAttribute("data-embedded", "1");
+      }
+      var forced = window.__CHOREOAI_LANG__ || params.lang || null;
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) {}
+      var initial = forced || saved || ((navigator.language || "").toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+      apply(initial);
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          apply(btn.getAttribute("data-set-lang"));
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
