@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NeonForm User Agreement</title>
+  <style>
+    :root {
+      --bg: #0b121a;
+      --card: #121c28;
+      --text: #e8eef6;
+      --muted: #93a4b8;
+      --accent: #7dffb3;
+      --line: rgba(148, 163, 184, 0.22);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #163024 0%, transparent 55%),
+                  radial-gradient(900px 500px at 100% 0%, #13233a 0%, transparent 50%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 28px 20px 64px; }
+    header {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      align-items: flex-start; justify-content: space-between;
+      margin-bottom: 28px; padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .mark {
+      width: 42px; height: 42px; border-radius: 10px;
+      background: linear-gradient(145deg, #7dffb3, #3aa0ff);
+      color: #04110a; font-weight: 800; display: grid; place-items: center;
+      letter-spacing: -0.04em;
+    }
+    h1 { margin: 0 0 4px; font-size: 1.55rem; }
+    .meta { color: var(--muted); font-size: 0.92rem; margin: 0; }
+    .lang {
+      display: inline-flex; padding: 4px; border-radius: 999px;
+      background: rgba(255,255,255,0.06); border: 1px solid var(--line);
+    }
+    .lang button {
+      border: 0; background: transparent; color: var(--muted);
+      padding: 8px 14px; border-radius: 999px; cursor: pointer; font-weight: 600;
+    }
+    .lang button.active { background: var(--accent); color: #04110a; }
+    article {
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border: 1px solid var(--line); border-radius: 18px; padding: 28px 24px;
+    }
+    h2 { font-size: 1.12rem; margin: 1.6em 0 0.55em; color: var(--accent); }
+    h2:first-child { margin-top: 0; }
+    p, li { color: #d5deea; }
+    ul { padding-left: 1.2em; }
+    a { color: var(--accent); }
+    .note {
+      margin-top: 1.2em; padding: 12px 14px; border-radius: 12px;
+      background: rgba(125, 255, 179, 0.08); border: 1px solid rgba(125, 255, 179, 0.25);
+      color: #cfe9da; font-size: 0.95rem;
+    }
+    footer { margin-top: 22px; color: var(--muted); font-size: 0.88rem; }
+    [data-i18n-zh] { display: none; }
+    html[lang^="zh"] [data-i18n-en] { display: none; }
+    html[lang^="zh"] [data-i18n-zh] { display: block; }
+    html[lang^="zh"] span[data-i18n-zh],
+    html[lang^="zh"] a[data-i18n-zh] { display: inline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark">NF</div>
+        <div>
+          <h1 data-i18n-en>User Agreement</h1>
+          <h1 data-i18n-zh>用户协议</h1>
+          <p class="meta" data-i18n-en>NeonForm · Terms of Use · Effective date: September 15, 2026</p>
+          <p class="meta" data-i18n-zh>NeonForm · 使用条款 · 生效日期：2026 年 9 月 15 日</p>
+        </div>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active">English</button>
+        <button type="button" data-lang="zh">中文</button>
+      </div>
+    </header>
+
+    <article data-i18n-en>
+      <p>Welcome to <strong>NeonForm</strong>. By downloading, installing, or using the App, you agree to this User Agreement (the “Terms”). If you do not agree, do not use NeonForm.</p>
+
+      <h2>1. The service</h2>
+      <p>NeonForm provides workout planning, local training logs, and AI-assisted form coaching features for iPhone. Features may include session timers, rest intervals, bookmarks, analytics summaries, notifications within the App, and optional voice cues.</p>
+
+      <h2>2. Eligibility</h2>
+      <p>You must meet the minimum age required by the laws of your region (and in any case not younger than 13) and be able to form a binding contract. If you use the App on behalf of an organization, you represent that you have authority to accept these Terms.</p>
+
+      <div class="note"><strong>Health &amp; safety:</strong> NeonForm is a fitness coaching aid, not a medical device. It does not diagnose, treat, or prevent any disease. Consult a qualified professional before starting a new exercise program, especially if you have injuries or medical conditions.</div>
+
+      <h2>3. License</h2>
+      <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use NeonForm on Apple devices you own or control, in accordance with the App Store terms and these Terms. You may not reverse engineer, redistribute, or misuse the App except as allowed by applicable law.</p>
+
+      <h2>4. Your responsibilities</h2>
+      <ul>
+        <li>Use the App safely and with appropriate space, footwear, and equipment.</li>
+        <li>Do not rely solely on automated cues when they conflict with pain, dizziness, or unsafe conditions—stop exercising.</li>
+        <li>Keep your device OS updated and manage permissions responsibly.</li>
+        <li>Do not use the App to harass others or for unlawful purposes.</li>
+      </ul>
+
+      <h2>5. AI and estimates</h2>
+      <p>Scores, calorie estimates, stability metrics, and coaching hints are algorithmic approximations. They may be incomplete, delayed, or incorrect. You remain solely responsible for how you interpret and act on any suggestion.</p>
+
+      <h2>6. User content and local data</h2>
+      <p>Workout history and preferences you create are stored primarily on your device. You are responsible for backing up important information. Deleting data or uninstalling the App may permanently remove local records.</p>
+
+      <h2>7. Intellectual property</h2>
+      <p>NeonForm name, logos, UI, text, and software are owned by the developer or its licensors. These Terms do not transfer ownership to you.</p>
+
+      <h2>8. Disclaimer of warranties</h2>
+      <p>To the maximum extent permitted by law, NeonForm is provided “AS IS” and “AS AVAILABLE,” without warranties of merchantability, fitness for a particular purpose, or non-infringement. We do not warrant uninterrupted or error-free operation.</p>
+
+      <h2>9. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or for personal injury arising from exercise decisions you make. Our total liability for any claim relating to the App shall not exceed the amount you paid for the App in the twelve (12) months before the claim (or zero if the App was free).</p>
+
+      <h2>10. Third-party platforms</h2>
+      <p>If you obtained NeonForm from the Apple App Store, Apple’s standard EULA and App Store terms may also apply. Apple is not responsible for maintenance or support of NeonForm except as required by those terms.</p>
+
+      <h2>11. Changes and termination</h2>
+      <p>We may update features or these Terms. Continued use after an update constitutes acceptance of the revised Terms where permitted by law. We may suspend or terminate access if you violate these Terms. You may stop using the App at any time by uninstalling it.</p>
+
+      <h2>12. Governing law</h2>
+      <p>These Terms are governed by the laws applicable in the developer’s principal place of business, without regard to conflict-of-law rules, except where mandatory consumer protections in your country require otherwise.</p>
+
+      <h2>13. Contact</h2>
+      <p>Legal notices: <a href="mailto:legal@neonform.app">legal@neonform.app</a><br />
+      Privacy: <a href="./NeonForm_PrivacyPolicy.html">Privacy Policy</a> · Help: <a href="./NeonForm_Support.html">Support</a></p>
+    </article>
+
+    <article data-i18n-zh>
+      <p>欢迎使用 <strong>NeonForm</strong>。下载、安装或使用本应用，即表示您同意本《用户协议》（以下简称“本协议”）。如不同意，请勿使用 NeonForm。</p>
+
+      <h2>1. 服务内容</h2>
+      <p>NeonForm 为 iPhone 提供训练计划、本地训练记录与 AI 辅助动作纠错等功能，可能包括训练计时、组间休息、收藏、数据汇总、应用内通知以及可选的语音提示。</p>
+
+      <h2>2. 使用资格</h2>
+      <p>您须达到所在地区法律规定的最低年龄（且不得低于 13 岁），并具备签署约束性合同的能力。若您代表组织使用本应用，即表示您有权接受本协议。</p>
+
+      <div class="note"><strong>健康与安全：</strong>NeonForm 是健身辅助工具，不是医疗器械，不用于诊断、治疗或预防任何疾病。开始新的训练计划前，请咨询专业人士；如有伤病或特殊健康状况，请格外谨慎。</div>
+
+      <h2>3. 许可</h2>
+      <p>我们授予您个人的、非独占、不可转让、可撤销的许可，以便在您拥有或控制的 Apple 设备上按照 App Store 条款及本协议使用 NeonForm。除适用法律允许外，您不得逆向工程、再分发或滥用本应用。</p>
+
+      <h2>4. 您的义务</h2>
+      <ul>
+        <li>在安全的空间、合适的装备下使用本应用。</li>
+        <li>当出现疼痛、眩晕或不安全情况时，不要仅依赖自动提示，应立即停止训练。</li>
+        <li>及时更新系统，并妥善管理系统权限。</li>
+        <li>不得利用本应用从事骚扰或违法活动。</li>
+      </ul>
+
+      <h2>5. AI 与估算数据</h2>
+      <p>评分、热量估算、稳定度与纠错提示均为算法近似结果，可能不完整、延迟或不准确。您应自行判断并承担据此采取行动的责任。</p>
+
+      <h2>6. 用户内容与本地数据</h2>
+      <p>您创建的训练历史与偏好主要保存在本机。请自行备份重要信息。删除数据或卸载应用可能导致本地记录永久丢失。</p>
+
+      <h2>7. 知识产权</h2>
+      <p>NeonForm 名称、标识、界面、文案与软件归开发者或其许可方所有。本协议不向您转让所有权。</p>
+
+      <h2>8. 免保证</h2>
+      <p>在法律允许的最大范围内，NeonForm 按“现状”和“可用”基础提供，不作适销性、特定用途适用性或不侵权等明示或默示保证。我们不保证服务不中断或无错误。</p>
+
+      <h2>9. 责任限制</h2>
+      <p>在法律允许的最大范围内，我们对间接、附带、特殊、后果性或惩罚性损害，以及因您自行作出的运动决定导致的人身损害不承担责任。与本应用相关的索赔，我们的累计责任不超过索赔前十二（12）个月内您就本应用支付的费用（若免费则为零）。</p>
+
+      <h2>10. 第三方平台</h2>
+      <p>若您通过 Apple App Store 获取 NeonForm，还可能适用 Apple 标准许可与商店条款。除该等条款另有要求外，Apple 不对 NeonForm 的维护或支持负责。</p>
+
+      <h2>11. 变更与终止</h2>
+      <p>我们可能更新功能或本协议。在法律允许的情况下，更新后继续使用视为接受修订条款。若您违反本协议，我们可暂停或终止访问。您可随时卸载并停止使用。</p>
+
+      <h2>12. 适用法律</h2>
+      <p>本协议适用开发者主要营业地法律，不考虑冲突法规则；但您所在国家/地区强制消费者保护规定另有要求的除外。</p>
+
+      <h2>13. 联系方式</h2>
+      <p>法律事务：<a href="mailto:legal@neonform.app">legal@neonform.app</a><br />
+      隐私：<a href="./NeonForm_PrivacyPolicy.html">隐私政策</a> · 帮助：<a href="./NeonForm_Support.html">支持</a></p>
+    </article>
+
+    <footer>
+      <span data-i18n-en>Related: <a href="./NeonForm_PrivacyPolicy.html">Privacy Policy</a> · <a href="./NeonForm_Support.html">Support</a></span>
+      <span data-i18n-zh>相关链接：<a href="./NeonForm_PrivacyPolicy.html">隐私政策</a> · <a href="./NeonForm_Support.html">支持</a></span>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var KEY = "neonform_legal_lang";
+      function apply(lang) {
+        document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+        document.querySelectorAll(".lang button").forEach(function (btn) {
+          btn.classList.toggle("active", btn.getAttribute("data-lang") === lang);
+        });
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+      }
+      var saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) {}
+      var initial = saved || (navigator.language && navigator.language.toLowerCase().indexOf("zh") === 0 ? "zh" : "en");
+      apply(initial);
+      document.querySelectorAll(".lang button").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-lang")); });
+      });
+    })();
+  </script>
+</body>
+</html>
