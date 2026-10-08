@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HerSafe Support</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #131d31;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #e63946;
+      --safe: #10b981;
+      --frost: #38bdf8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Helvetica Neue", sans-serif;
+      background: radial-gradient(1000px 500px at 50% -20%, #1e293b 0%, var(--bg) 50%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 28px 20px 64px; }
+    header {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      justify-content: space-between; margin-bottom: 28px;
+    }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px; background: #0f172a;
+      border: 1px solid var(--accent); display: grid; place-items: center;
+      color: var(--accent); font-weight: 800;
+    }
+    h1 { margin: 0; font-size: 1.55rem; }
+    .sub { color: var(--muted); font-size: .9rem; margin-top: 2px; }
+    .lang {
+      display: inline-flex; background: var(--card); border: 1px solid var(--border);
+      border-radius: 999px; overflow: hidden;
+    }
+    .lang button {
+      border: 0; background: transparent; color: var(--muted); padding: 8px 14px;
+      cursor: pointer; font-weight: 600;
+    }
+    .lang button.active { background: var(--accent); color: #fff; }
+    .grid { display: grid; gap: 14px; }
+    @media (min-width: 720px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+    .card {
+      background: rgba(19, 29, 49, .92); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px 18px;
+    }
+    h2 { font-size: 1.05rem; margin: 0 0 .55em; color: #7bd0ff; }
+    p, li { color: #dde2f8; font-size: .96rem; margin: .35em 0; }
+    ul { padding-left: 1.15em; margin: .4em 0; }
+    .pill {
+      display: inline-block; margin-top: 8px; padding: 6px 10px; border-radius: 999px;
+      border: 1px solid rgba(16, 185, 129, .45); color: var(--safe); font-size: .82rem; font-weight: 700;
+    }
+    a.mail {
+      display: inline-block; margin-top: 10px; padding: 12px 16px; border-radius: 12px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 700;
+    }
+    a { color: var(--safe); }
+    footer { margin-top: 28px; color: var(--muted); font-size: .85rem; text-align: center; }
+    .hide { display: none !important; }
+    .meta { color: var(--muted); font-size: .85rem; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">HS</div>
+        <div>
+          <h1 data-i18n="title">HerSafe 支持</h1>
+          <div class="sub">HerSafe / 伴她同行</div>
+        </div>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-zh" class="active" onclick="setLang('zh')">中文</button>
+        <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </header>
+
+    <p class="meta" data-i18n="updated">支持文档版本：2026-09-17</p>
+
+    <div id="zh" class="grid">
+      <div class="card">
+        <h2>联系支持</h2>
+        <p>产品咨询、隐私请求、功能反馈或漏洞报告，请发送邮件：</p>
+        <a class="mail" href="mailto:support@hersafe.app?subject=HerSafe%20Support">support@hersafe.app</a>
+        <p style="margin-top:12px;color:#94a3b8;font-size:.9rem;">请在邮件中注明系统版本、机型与问题复现步骤，便于我们更快协助。</p>
+        <span class="pill">通常 1–3 个工作日内回复</span>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h2>常见问题</h2>
+          <ul>
+            <li><strong>SOS 无反应？</strong>请检查是否授予必要权限，并确认未处于静音限制场景。</li>
+            <li><strong>定位不显示？</strong>请在系统设置中允许定位，并在开阔环境重试。</li>
+            <li><strong>紧急联系人为空？</strong>正式版不会预置个人数据，请在「应急配置」中自行添加。</li>
+            <li><strong>语言如何切换？</strong>应用内「关于」页可切换中文 / English / 跟随系统。</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>安全提示</h2>
+          <ul>
+            <li>真实危险请优先拨打当地紧急电话。</li>
+            <li>伪装来电与警报为辅助工具，请合法合规使用。</li>
+            <li>请定期确认紧急联系人号码仍然有效。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>相关文档</h2>
+        <p>
+          <a href="./HerSafe_PrivacyPolicy.html">隐私政策</a> ·
+          <a href="./HerSafe_UserAgreement.html">用户协议</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="en" class="grid hide">
+      <div class="card">
+        <h2>Contact Support</h2>
+        <p>For product questions, privacy requests, feedback, or vulnerability reports, email:</p>
+        <a class="mail" href="mailto:support@hersafe.app?subject=HerSafe%20Support">support@hersafe.app</a>
+        <p style="margin-top:12px;color:#94a3b8;font-size:.9rem;">Include OS version, device model, and steps to reproduce so we can help faster.</p>
+        <span class="pill">Typical reply within 1–3 business days</span>
+      </div>
+
+      <div class="grid two">
+        <div class="card">
+          <h2>FAQ</h2>
+          <ul>
+            <li><strong>SOS not responding?</strong> Check required permissions and silent-mode limits.</li>
+            <li><strong>No location?</strong> Allow Location in Settings and retry outdoors.</li>
+            <li><strong>Empty contacts?</strong> Release builds do not seed personal demo data—add contacts in Config.</li>
+            <li><strong>Language?</strong> Switch Chinese / English / System in the in-app About page.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h2>Safety Notes</h2>
+          <ul>
+            <li>In real danger, call local emergency services first.</li>
+            <li>Disguise calls and alarms are assistive tools—use them lawfully.</li>
+            <li>Periodically verify that emergency contact numbers are still valid.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Related Documents</h2>
+        <p>
+          <a href="./HerSafe_PrivacyPolicy.html">Privacy Policy</a> ·
+          <a href="./HerSafe_UserAgreement.html">User Agreement</a>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <span data-i18n="footer">© HerSafe · 伴她同行</span>
+    </footer>
+  </div>
+  <script>
+    function setLang(lang) {
+      document.getElementById('zh').classList.toggle('hide', lang !== 'zh');
+      document.getElementById('en').classList.toggle('hide', lang !== 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+      document.title = lang === 'zh' ? 'HerSafe 支持' : 'HerSafe Support';
+      document.querySelector('[data-i18n="title"]').textContent =
+        lang === 'zh' ? 'HerSafe 支持' : 'HerSafe Support';
+      document.querySelector('[data-i18n="updated"]').textContent =
+        lang === 'zh' ? '支持文档版本：2026-09-17' : 'Support doc version: 2026-09-17';
+      document.querySelector('[data-i18n="footer"]').textContent =
+        lang === 'zh' ? '© HerSafe · 伴她同行' : '© HerSafe';
+      try { localStorage.setItem('hersafe_lang', lang); } catch (e) {}
+    }
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hersafe_lang'); } catch (e) {}
+      var prefer = saved || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
+      setLang(prefer);
+    })();
+  </script>
+</body>
+</html>

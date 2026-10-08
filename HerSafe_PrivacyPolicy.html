@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HerSafe Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --card: #131d31;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #e63946;
+      --safe: #10b981;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Helvetica Neue", sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2338 0%, var(--bg) 55%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 28px 20px 64px; }
+    header {
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+      justify-content: space-between; margin-bottom: 28px;
+    }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .logo {
+      width: 44px; height: 44px; border-radius: 12px; background: #0f172a;
+      border: 1px solid var(--accent); display: grid; place-items: center;
+      color: var(--accent); font-weight: 800;
+    }
+    h1 { margin: 0; font-size: 1.55rem; }
+    .sub { color: var(--muted); font-size: .9rem; margin-top: 2px; }
+    .lang {
+      display: inline-flex; background: var(--card); border: 1px solid var(--border);
+      border-radius: 999px; overflow: hidden;
+    }
+    .lang button {
+      border: 0; background: transparent; color: var(--muted); padding: 8px 14px;
+      cursor: pointer; font-weight: 600;
+    }
+    .lang button.active { background: var(--accent); color: #fff; }
+    article {
+      background: rgba(19, 29, 49, .92); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px 22px;
+    }
+    h2 { font-size: 1.1rem; margin: 1.4em 0 .5em; color: #ffb3b1; }
+    h2:first-child { margin-top: 0; }
+    p, li { color: #dde2f8; font-size: .98rem; }
+    ul { padding-left: 1.2em; }
+    .meta { color: var(--muted); font-size: .85rem; margin-bottom: 1.2em; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .85rem; text-align: center; }
+    a { color: var(--safe); }
+    .hide { display: none !important; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">HS</div>
+        <div>
+          <h1 data-i18n="title">HerSafe 隐私政策</h1>
+          <div class="sub">HerSafe / 伴她同行</div>
+        </div>
+      </div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-zh" class="active" onclick="setLang('zh')">中文</button>
+        <button type="button" id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </header>
+
+    <article>
+      <p class="meta" data-i18n="updated">更新日期：2026-09-17 · 生效日期：2026-09-17</p>
+
+      <div id="zh">
+        <h2>1. 引言</h2>
+        <p>欢迎使用 HerSafe（伴她同行，以下简称“本应用”）。我们重视您的隐私。本政策说明本应用如何收集、使用、存储与保护信息。本应用以本地、离线能力为主，默认不依赖云端账号体系。</p>
+
+        <h2>2. 我们收集的信息</h2>
+        <p>在您授权或主动配置的前提下，本应用可能处理以下信息：</p>
+        <ul>
+          <li><strong>您主动填写的信息：</strong>紧急联系人姓名、角色、电话号码、自定义求救短信模板等。</li>
+          <li><strong>设备与安全相关信息：</strong>在您开启相关功能时，可能使用定位、麦克风、闪光灯、运动传感器、触感反馈等系统能力，用于 SOS、伪装来电辅助、本地取证等功能。</li>
+          <li><strong>本地运行数据：</strong>功能开关状态、语言偏好、本地计时与演示反馈状态等。</li>
+        </ul>
+        <p>我们不会要求您注册账号，也不会默认上传通讯录、相册或云端身份信息。</p>
+
+        <h2>3. 信息的使用目的</h2>
+        <ul>
+          <li>提供紧急求助、伪装来电、离线自救指南与本地配置功能；</li>
+          <li>在您触发时模拟或辅助发送求救信息、展示状态反馈；</li>
+          <li>改进应用稳定性与可用性（仅限本地诊断，不进行画像广告）。</li>
+        </ul>
+
+        <h2>4. 存储与传输</h2>
+        <p>紧急联系人、短信模板、语言设置等优先保存在本机。本应用设计目标为“本地优先、最小必要”。除非您主动使用系统分享/短信/电话能力，或未来版本在另行告知并征得同意后接入云服务，否则我们不会将上述个人信息上传至我们的服务器。</p>
+
+        <h2>5. 权限说明</h2>
+        <ul>
+          <li><strong>定位：</strong>用于展示或附带当前位置（需您授权）。</li>
+          <li><strong>麦克风：</strong>用于本地录音取证类功能（需您授权）。</li>
+          <li><strong>通知/电话/短信（如适用）：</strong>用于系统级呼叫或短信能力，由系统与运营商处理。</li>
+        </ul>
+        <p>您可在系统设置中随时撤回授权；撤回后相关功能可能不可用。</p>
+
+        <h2>6. 第三方服务</h2>
+        <p>当前版本不以嵌入式分析/广告 SDK 为默认能力。若后续引入地图、推送等第三方服务，我们将更新本政策并说明其处理范围。</p>
+
+        <h2>7. 未成年人</h2>
+        <p>本应用主要面向具备完全民事行为能力的用户。若您为未成年人，请在监护人指导下使用，并谨慎填写个人信息。</p>
+
+        <h2>8. 您的权利</h2>
+        <p>您可以在应用内查看、修改或删除您主动添加的紧急联系人与短信模板；也可通过卸载应用清除本地数据。如需隐私相关协助，请通过 Support 页面联系我们。</p>
+
+        <h2>9. 政策更新</h2>
+        <p>我们可能适时更新本政策。重大变更将通过应用内提示或页面更新日期告知。继续使用即表示您知悉更新后的政策。</p>
+
+        <h2>10. 联系我们</h2>
+        <p>隐私问题请参见 <a href="./HerSafe_Support.html">HerSafe_Support.html</a>。</p>
+      </div>
+
+      <div id="en" class="hide">
+        <h2>1. Introduction</h2>
+        <p>Welcome to HerSafe (also known as 伴她同行, the “App”). We respect your privacy. This Policy explains how information is collected, used, stored, and protected. The App is local-first and offline-oriented and does not require a cloud account by default.</p>
+
+        <h2>2. Information We Process</h2>
+        <p>With your permission or when you enter data, the App may process:</p>
+        <ul>
+          <li><strong>Information you provide:</strong> emergency contact names, roles, phone numbers, and custom SOS SMS templates.</li>
+          <li><strong>Device/safety-related data:</strong> when enabled, location, microphone, flashlight, motion sensors, and haptics for SOS, disguise-call assistance, and local evidence features.</li>
+          <li><strong>Local runtime data:</strong> feature toggles, language preference, timers, and on-device feedback state.</li>
+        </ul>
+        <p>We do not require registration and do not upload your address book, photos, or cloud identity by default.</p>
+
+        <h2>3. Purposes of Use</h2>
+        <ul>
+          <li>Provide emergency assistance, disguise calls, offline safety guides, and local configuration;</li>
+          <li>Simulate or assist SOS messaging and status feedback when you trigger features;</li>
+          <li>Improve stability and usability (local diagnostics only; no ad profiling).</li>
+        </ul>
+
+        <h2>4. Storage & Transfer</h2>
+        <p>Contacts, SMS templates, and language settings are stored on device whenever possible. Unless you actively use system Share/SMS/Phone capabilities, or a future version introduces cloud services after notice and consent, we do not upload such personal data to our servers.</p>
+
+        <h2>5. Permissions</h2>
+        <ul>
+          <li><strong>Location:</strong> to show or attach your current position (with consent).</li>
+          <li><strong>Microphone:</strong> for local evidence recording (with consent).</li>
+          <li><strong>Notifications/Phone/SMS (if applicable):</strong> handled by the OS and carriers.</li>
+        </ul>
+        <p>You may revoke permissions in system settings; related features may stop working.</p>
+
+        <h2>6. Third Parties</h2>
+        <p>This version does not ship analytics/ad SDKs by default. If maps, push, or other third parties are added later, we will update this Policy.</p>
+
+        <h2>7. Children</h2>
+        <p>The App is intended for users with full civil capacity. Minors should use it under guardian guidance and enter personal data carefully.</p>
+
+        <h2>8. Your Choices</h2>
+        <p>You may view, edit, or delete contacts and SMS templates in the App, or uninstall to clear local data. For privacy requests, see the Support page.</p>
+
+        <h2>9. Changes</h2>
+        <p>We may update this Policy. Material changes will be indicated by an in-app notice or an updated date on this page.</p>
+
+        <h2>10. Contact</h2>
+        <p>See <a href="./HerSafe_Support.html">HerSafe_Support.html</a>.</p>
+      </div>
+    </article>
+
+    <footer>
+      <span data-i18n="footer">© HerSafe · 伴她同行</span>
+      · <a href="./HerSafe_UserAgreement.html">User Agreement</a>
+      · <a href="./HerSafe_Support.html">Support</a>
+    </footer>
+  </div>
+  <script>
+    function setLang(lang) {
+      document.getElementById('zh').classList.toggle('hide', lang !== 'zh');
+      document.getElementById('en').classList.toggle('hide', lang !== 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+      document.title = lang === 'zh' ? 'HerSafe 隐私政策' : 'HerSafe Privacy Policy';
+      document.querySelector('[data-i18n="title"]').textContent =
+        lang === 'zh' ? 'HerSafe 隐私政策' : 'HerSafe Privacy Policy';
+      document.querySelector('[data-i18n="updated"]').textContent =
+        lang === 'zh' ? '更新日期：2026-09-17 · 生效日期：2026-09-17' : 'Updated: 2026-09-17 · Effective: 2026-09-17';
+      document.querySelector('[data-i18n="footer"]').textContent =
+        lang === 'zh' ? '© HerSafe · 伴她同行' : '© HerSafe';
+      try { localStorage.setItem('hersafe_lang', lang); } catch (e) {}
+    }
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('hersafe_lang'); } catch (e) {}
+      var prefer = saved || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
+      setLang(prefer);
+    })();
+  </script>
+</body>
+</html>
