@@ -1,0 +1,125 @@
+:root {
+  --wq-bg: #100c0e;
+  --wq-panel: #1b2022;
+  --wq-text: #dfe3e6;
+  --wq-muted: #e4beb4;
+  --wq-accent: #ff5722;
+  --wq-link: #ffb5a0;
+  --wq-border: rgba(228, 190, 180, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", sans-serif;
+  background: var(--wq-bg);
+  color: var(--wq-text);
+  line-height: 1.55;
+  padding: max(12px, env(safe-area-inset-top)) 16px max(20px, env(safe-area-inset-bottom));
+}
+
+.wq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.wq-brand {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  color: var(--wq-muted);
+}
+
+.wq-lang {
+  display: flex;
+  gap: 6px;
+}
+
+.wq-lang button {
+  border: 1px solid var(--wq-border);
+  background: var(--wq-panel);
+  color: var(--wq-text);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.wq-lang button.active {
+  border-color: var(--wq-accent);
+  color: var(--wq-link);
+}
+
+.wq-main h1 {
+  font-size: 1.5rem;
+  margin: 0 0 6px;
+}
+
+.wq-meta {
+  font-size: 12px;
+  color: rgba(223, 227, 230, 0.65);
+  margin: 0 0 16px;
+}
+
+.wq-card {
+  background: var(--wq-panel);
+  border: 1px solid var(--wq-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+
+.wq-card h2 {
+  font-size: 15px;
+  margin: 0 0 8px;
+  color: var(--wq-muted);
+}
+
+.wq-card p,
+.wq-card li {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+.wq-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.wq-faq dt {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.wq-faq dt:first-child { margin-top: 0; }
+
+.wq-faq dd {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: rgba(223, 227, 230, 0.88);
+}
+
+a { color: var(--wq-link); }
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  color: var(--wq-accent);
+}
+
+.hidden { display: none !important; }
+
+.wq-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(223, 227, 230, 0.55);
+}
+
+.wq-footer a { text-decoration: none; }
