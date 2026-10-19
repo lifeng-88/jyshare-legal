@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PulseFit Support</title>
+  <style>
+    :root {
+      --bg: #0b1326;
+      --surface: #171f33;
+      --surface-high: #222a3d;
+      --text: #dae2fd;
+      --muted: #bbcabf;
+      --accent: #4edea3;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 19, 38, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand { font-weight: 700; font-size: 18px; color: var(--accent); }
+    .lang-toggle {
+      display: flex;
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 3px;
+      border: 1px solid var(--border);
+    }
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .lang-toggle button.active {
+      background: rgba(78, 222, 163, 0.2);
+      color: var(--accent);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+    h1 { font-size: 26px; margin: 0 0 8px; }
+    .subtitle { color: var(--muted); margin-bottom: 28px; }
+    h2 { font-size: 18px; margin: 28px 0 12px; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .contact-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+    .contact-item strong { display: block; color: var(--text); margin-bottom: 4px; }
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text);
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    details p { margin: 10px 0 0; font-size: 14px; }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .links a {
+      background: var(--surface-high);
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">PulseFit</span>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-set-lang="zh" class="active">中文</button>
+      <button type="button" data-set-lang="en">EN</button>
+    </div>
+  </header>
+  <main>
+    <div data-lang="zh" class="visible">
+      <h1>PulseFit 支持中心</h1>
+      <p class="subtitle">我们致力于帮助您更好地使用 PulseFit 进行健康与运动管理。</p>
+
+      <h2>联系我们</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <strong>电子邮件</strong>
+          <a href="mailto:support@pulsefit.app">support@pulsefit.app</a>
+          <p style="margin:8px 0 0;font-size:13px">一般咨询、账户与数据问题，通常在 1–3 个工作日内回复。</p>
+        </div>
+        <div class="contact-item">
+          <strong>应用信息</strong>
+          PulseFit · iOS 15.0 及以上 · iPhone 竖屏
+        </div>
+      </div>
+
+      <h2>常见问题</h2>
+      <details>
+        <summary>如何记录饮水与体征？</summary>
+        <p>在「概览」点击水分卡片上的 +250ml，或使用「记录体征」进入表单。您也可在「体征」页点击「记录今日体征」。</p>
+      </details>
+      <details>
+        <summary>运动记录如何保存？</summary>
+        <p>在「运动」开启户外跑或课程，进入运动会话后点击「结束并保存」。记录会出现在「最近运动动态」并更新周目标与跑量统计。</p>
+      </details>
+      <details>
+        <summary>数据会丢失吗？</summary>
+        <p>喝水、待办、运动历史等会保存在设备本地。您可在「档案 → 导出我的数据」备份 CSV；「清除本地数据」将删除本机全部 PulseFit 记录。卸载应用也会清除本地数据。</p>
+      </details>
+      <details>
+        <summary>如何连接 Apple Health？</summary>
+        <p>在「档案」→「连接 Apple Health」中授权同步。您也可在「隐私与数据管理」中<strong>导出 CSV</strong>或<strong>清除本地数据</strong>。</p>
+      </details>
+
+      <h2>法律与支持文档</h2>
+      <div class="links">
+        <a href="pulsefit_privacy_policy.html">隐私政策</a>
+        <a href="pulsefit_user_agreement.html">用户协议</a>
+      </div>
+    </div>
+
+    <div data-lang="en">
+      <h1>PulseFit Support</h1>
+      <p class="subtitle">We’re here to help you get the most out of PulseFit for health and fitness tracking.</p>
+
+      <h2>Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:support@pulsefit.app">support@pulsefit.app</a>
+          <p style="margin:8px 0 0;font-size:13px">General inquiries and account/data questions. We typically respond within 1–3 business days.</p>
+        </div>
+        <div class="contact-item">
+          <strong>App Info</strong>
+          PulseFit · iOS 15.0+ · iPhone, portrait orientation
+        </div>
+      </div>
+
+      <h2>FAQ</h2>
+      <details>
+        <summary>How do I log water and vitals?</summary>
+        <p>On Overview, tap +250ml on the hydration card or use “Log vitals” to open the form. You can also tap “Log today’s vitals” on the Vitals tab.</p>
+      </details>
+      <details>
+        <summary>How are workouts saved?</summary>
+        <p>Start an outdoor run or course from Workout, then tap “End & Save” in the session screen. Records appear under recent activity and update weekly goals and mileage.</p>
+      </details>
+      <details>
+        <summary>Will I lose my data?</summary>
+        <p>Hydration, todos, and workout history are stored locally on your device. Uninstalling the App may remove local data—back up important records if needed.</p>
+      </details>
+      <details>
+        <summary>How do I connect Apple Health?</summary>
+        <p>Open Profile → Connect Apple Health to sync. Use Privacy &amp; Data to export CSV or clear on-device data.</p>
+      </details>
+
+      <h2>Legal</h2>
+      <div class="links">
+        <a href="pulsefit_privacy_policy.html">Privacy Policy</a>
+        <a href="pulsefit_user_agreement.html">User Agreement</a>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var KEY = 'pulsefit_support_lang';
+      var buttons = document.querySelectorAll('[data-set-lang]');
+      var blocks = document.querySelectorAll('[data-lang]');
+      function setLang(lang) {
+        blocks.forEach(function (el) {
+          el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+        });
+        buttons.forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
+        });
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+      }
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setLang(btn.getAttribute('data-set-lang'));
+        });
+      });
+      var saved = 'zh';
+      try { saved = localStorage.getItem(KEY) || 'zh'; } catch (e) {}
+      setLang(saved === 'en' ? 'en' : 'zh');
+    })();
+  </script>
+</body>
+</html>

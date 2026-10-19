@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>PulseFit User Agreement</title>
+  <style>
+    :root {
+      --bg: #0b1326;
+      --surface: #171f33;
+      --text: #dae2fd;
+      --muted: #bbcabf;
+      --accent: #4edea3;
+      --border: rgba(255, 255, 255, 0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(11, 19, 38, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand { font-weight: 700; font-size: 18px; color: var(--accent); }
+    .lang-toggle {
+      display: flex;
+      background: var(--surface);
+      border-radius: 999px;
+      padding: 3px;
+      border: 1px solid var(--border);
+    }
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .lang-toggle button.active {
+      background: rgba(78, 222, 163, 0.2);
+      color: var(--accent);
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 48px;
+    }
+    h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .updated { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+    h2 { font-size: 18px; margin: 28px 0 10px; }
+    p, li { color: var(--muted); }
+    ul { padding-left: 1.25rem; }
+    a { color: var(--accent); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px;
+      margin-top: 24px;
+    }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="brand">PulseFit</span>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-set-lang="zh" class="active">中文</button>
+      <button type="button" data-set-lang="en">EN</button>
+    </div>
+  </header>
+  <main>
+    <div data-lang="zh" class="visible">
+      <h1>PulseFit 用户协议</h1>
+      <p class="updated">生效日期：2026年10月15日 · 最后更新：2026年10月15日</p>
+      <p>请您在使用 PulseFit（「本应用」）前仔细阅读本协议。下载、安装、注册或使用本应用，即表示您同意受本协议约束。若不同意，请勿使用本应用。</p>
+
+      <h2>1. 服务说明</h2>
+      <p>PulseFit 提供健康与运动相关的信息记录、目标管理、数据展示及提醒等功能。本应用<strong>不构成医疗诊断、治疗或专业健身处方</strong>，不能替代医生、教练或其他持证专业人士的建议。</p>
+
+      <h2>2. 账户与使用规范</h2>
+      <ul>
+        <li>您应保证所提供信息真实、准确，并妥善保管设备与账户安全；</li>
+        <li>不得利用本应用从事违法、侵权、干扰服务或危害网络安全的行为；</li>
+        <li>不得反向工程、破解或未经授权抓取本应用数据与服务。</li>
+      </ul>
+
+      <h2>3. 健康与安全提示</h2>
+      <p>运动与健康数据仅供参考。开始新的训练计划前，请咨询专业人士；如感到不适，请立即停止运动并寻求医疗帮助。因您自身健康状况或不当使用导致的风险，由您自行承担，法律另有规定的除外。</p>
+
+      <h2>4. 知识产权</h2>
+      <p>本应用内的界面、标识、文案、软件代码及相关内容的知识产权归 PulseFit 或权利人所有。未经书面许可，不得复制、修改、传播或用于商业目的。</p>
+
+      <h2>5. 付费与订阅（如适用）</h2>
+      <p>若您购买会员或订阅服务，费用、周期、自动续费与退款规则以应用内展示及 App Store 政策为准。您可在系统订阅管理中取消自动续费。</p>
+
+      <h2>6. 免责声明与责任限制</h2>
+      <p>在适用法律允许的最大范围内，本应用按「现状」提供。我们对因网络、设备、第三方服务或不可抗力导致的服务中断、数据丢失等不承担责任。我们的总赔偿责任不超过您就本应用在过去 12 个月内已支付的费用（如有）。</p>
+
+      <h2>7. 协议变更与终止</h2>
+      <p>我们可能更新本协议或调整、终止部分功能，并将通过合理方式通知。您可随时停止使用并卸载本应用。我们亦可在您严重违反本协议时限制或终止向您提供服务。</p>
+
+      <h2>8. 适用法律与争议解决</h2>
+      <p>本协议的订立、效力与解释适用中华人民共和国法律（不含冲突法）。争议应友好协商；协商不成的，提交开发者所在地有管辖权的人民法院诉讼解决，法律另有规定的除外。</p>
+
+      <div class="card">
+        <p style="margin:0">相关文档：<a href="pulsefit_privacy_policy.html">隐私政策</a> · <a href="pulsefit_support.html">支持</a><br />
+        联系：<a href="mailto:support@pulsefit.app">support@pulsefit.app</a></p>
+      </div>
+    </div>
+
+    <div data-lang="en">
+      <h1>PulseFit User Agreement</h1>
+      <p class="updated">Effective: October 15, 2026 · Last updated: October 15, 2026</p>
+      <p>Please read this User Agreement (“Agreement”) before using PulseFit (“the App”). By downloading, installing, registering, or using the App, you agree to be bound by this Agreement. If you do not agree, do not use the App.</p>
+
+      <h2>1. Service Description</h2>
+      <p>PulseFit provides health and fitness logging, goal management, data visualization, and reminders. The App <strong>does not provide medical diagnosis, treatment, or professional training prescriptions</strong> and is not a substitute for advice from physicians, coaches, or licensed professionals.</p>
+
+      <h2>2. Account and Acceptable Use</h2>
+      <ul>
+        <li>You agree to provide accurate information and keep your device and account secure;</li>
+        <li>You must not use the App for unlawful, infringing, or disruptive activities;</li>
+        <li>You must not reverse engineer, crack, or scrape the App without authorization.</li>
+      </ul>
+
+      <h2>3. Health and Safety</h2>
+      <p>Fitness and health data are for reference only. Consult professionals before starting new programs. Stop exercising and seek medical help if you feel unwell. You assume risks related to your health and use of the App, except where prohibited by law.</p>
+
+      <h2>4. Intellectual Property</h2>
+      <p>UI, branding, content, software, and related materials are owned by PulseFit or licensors. You may not copy, modify, distribute, or commercialize them without written permission.</p>
+
+      <h2>5. Paid Features and Subscriptions (If Applicable)</h2>
+      <p>If you purchase memberships or subscriptions, pricing, billing cycles, auto-renewal, and refunds are governed by in-app disclosures and App Store policies. You may manage or cancel subscriptions in system settings.</p>
+
+      <h2>6. Disclaimer and Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, the App is provided “as is.” We are not liable for interruptions, data loss, or issues caused by networks, devices, third parties, or force majeure. Our total liability shall not exceed fees you paid for the App in the preceding 12 months (if any).</p>
+
+      <h2>7. Changes and Termination</h2>
+      <p>We may update this Agreement or modify/discontinue features with reasonable notice. You may stop using the App at any time. We may suspend or terminate access for material violations.</p>
+
+      <h2>8. Governing Law and Disputes</h2>
+      <p>This Agreement is governed by the laws of the People’s Republic of China (excluding conflict-of-law rules). Disputes shall first be resolved through good-faith negotiation; failing that, they shall be submitted to a court of competent jurisdiction where the developer is located, unless otherwise required by law.</p>
+
+      <div class="card">
+        <p style="margin:0">Related: <a href="pulsefit_privacy_policy.html">Privacy Policy</a> · <a href="pulsefit_support.html">Support</a><br />
+        Contact: <a href="mailto:support@pulsefit.app">support@pulsefit.app</a></p>
+      </div>
+    </div>
+  </main>
+  <script>
+    (function () {
+      var KEY = 'pulsefit_terms_lang';
+      var buttons = document.querySelectorAll('[data-set-lang]');
+      var blocks = document.querySelectorAll('[data-lang]');
+      function setLang(lang) {
+        blocks.forEach(function (el) {
+          el.classList.toggle('visible', el.getAttribute('data-lang') === lang);
+        });
+        buttons.forEach(function (btn) {
+          btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
+        });
+        document.documentElement.lang = lang === 'zh' ? 'zh-Hans' : 'en';
+        try { localStorage.setItem(KEY, lang); } catch (e) {}
+      }
+      buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setLang(btn.getAttribute('data-set-lang'));
+        });
+      });
+      var saved = 'zh';
+      try { saved = localStorage.getItem(KEY) || 'zh'; } catch (e) {}
+      setLang(saved === 'en' ? 'en' : 'zh');
+    })();
+  </script>
+</body>
+</html>
