@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" data-active-lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用户协议 · Chéri</title>
+  <meta name="description" content="Chéri 用户协议。使用这款本机手帐应用的条款。">
+  <style>
+    :root {
+      --bg: #fff8f5;
+      --ink: #221a14;
+      --muted: #55423f;
+      --faint: #88726e;
+      --line: #dbc1bb;
+      --accent: #9a4432;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html[data-active-lang="zh"] [data-lang="en"] { display: none; }
+    html[data-active-lang="en"] [data-lang="zh"] { display: none; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Iowan Old Style", Palatino, Georgia, serif;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 28px 22px 80px; }
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+    .brand {
+      color: var(--accent);
+      text-decoration: none;
+      letter-spacing: 0.12em;
+      font-size: 20px;
+    }
+    .switch {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--card);
+    }
+    .switch button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 7px 14px;
+      font: 600 13px/1 -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif;
+    }
+    .switch button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+    h1 { font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 10px; }
+    .meta, p, li, nav {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Segoe UI", sans-serif;
+    }
+    .meta { color: var(--faint); font-size: 13px; letter-spacing: 0.03em; margin: 0 0 8px; }
+    h2 { font-size: 22px; font-weight: 500; margin: 34px 0 8px; }
+    p, li { color: var(--muted); font-size: 16px; line-height: 1.75; }
+    a { color: var(--accent); }
+    ul { padding-left: 1.2em; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 48px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+    nav a { text-decoration: none; }
+    nav a[aria-current="page"] { color: var(--ink); font-weight: 650; }
+  </style>
+  <script>
+    (function () {
+      var lang = "zh";
+      try {
+        var saved = localStorage.getItem("cheri-legal-lang");
+        if (saved === "en" || saved === "zh") lang = saved;
+        else if (navigator.language && navigator.language.toLowerCase().indexOf("zh") !== 0) lang = "en";
+      } catch (e) {}
+      document.documentElement.setAttribute("data-active-lang", lang);
+      document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+    })();
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="Cheri-support.html">Chéri</a>
+      <div class="switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="zh" aria-pressed="true">中文</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+      </div>
+    </header>
+
+    <article data-lang="zh">
+      <p class="meta">生效日期：2026年10月12日</p>
+      <h1>用户协议</h1>
+      <p>本协议是你与 Chéri 开发者之间关于使用 iOS 应用 Chéri 的约定。下载、安装或继续使用本应用，即表示你同意本协议和<a href="Cheri-privacy-policy.html">隐私政策</a>。若你不同意，请停止使用并删除应用。</p>
+
+      <h2>服务说明</h2>
+      <p>Chéri 是一款个人手帐。你可以记录日常、标记心情、收藏灵感、为篇章上锁、插入自己的照片，并在本机设置晨昏提醒。应用不提供账号，也不把你的手帐同步到开发者的服务器。</p>
+      <p>灵感页中的文字与配图供阅读。配图可能来自网络。手帐正文仍只保存在你的设备上。</p>
+
+      <h2>使用许可</h2>
+      <p>我们授予你一项个人的、不可转让、非独占的许可，让你在自己拥有或控制的 iPhone 上使用 Chéri。你不得出售、出租、反向工程或绕过应用的正常使用方式，法律明确允许的情形除外。</p>
+
+      <h2>你的内容</h2>
+      <p>你写下的文字、选择的照片和标记，权利仍属于你或原权利人。为了在设备上显示、保存、导出和删除这些内容，你授权应用在本机进行处理。我们不因此获得你手帐的所有权。</p>
+      <p>你应确保自己有权使用插入手帐的照片和文字，并自行判断哪些内容适合保存或分享。通过系统分享导出后，接收方将按你的操作获得一份副本。</p>
+
+      <h2>使用规范</h2>
+      <p>请以合法、尊重他人权利的方式使用 Chéri。你不得利用应用存储或传播违法内容，或干扰应用的正常运行。私密标记只影响应用内的展示，不能替代设备锁屏或系统加密。</p>
+
+      <h2>知识产权</h2>
+      <p>应用本身的界面、名称 Chéri、图标、内置文案与编排，权利属于开发者或相应权利人。本协议不把这些权利转让给你。你的手帐内容不因此转归开发者。</p>
+
+      <h2>免责声明</h2>
+      <p>Chéri 按「现状」提供，用于个人记录与阅读。我们不保证应用永不中断、没有错误，或一定满足你的特定目的。灵感内容仅供参考，不构成医疗、心理、法律或财务建议。请自行保管设备，并在需要时使用系统分享留一份导出。</p>
+
+      <h2>责任限制</h2>
+      <p>在适用法律允许的范围内，开发者不对因使用或无法使用本应用而引起的间接、附带或后果性损失负责，包括手帐内容因设备故障、卸载或备份设置而丢失。法律不允许排除的责任，不在此限。</p>
+
+      <h2>终止</h2>
+      <p>你可以随时停止使用并卸载 Chéri。若你违反本协议，开发者可以停止向你提供更新或支持。卸载后，本机上的应用数据会按 iOS 的方式删除。协议中依其性质应继续有效的条款，在终止后仍然有效。</p>
+
+      <h2>协议更新</h2>
+      <p>我们可能更新本协议，并修改本页顶部的生效日期。更新发布后你继续使用应用，即表示你接受更新后的协议。若你不接受，请停止使用并卸载。</p>
+
+      <h2>适用法律</h2>
+      <p>本协议适用中华人民共和国法律。因本协议产生的争议，双方应先友好协商；协商不成的，提交有管辖权的人民法院处理。</p>
+
+      <h2>联系我们</h2>
+      <p>协议相关问题请发送到 <a href="mailto:support@cheri.app">support@cheri.app</a>。</p>
+    </article>
+
+    <article data-lang="en">
+      <p class="meta">Effective date: October 12, 2026</p>
+      <h1>User Agreement</h1>
+      <p>This agreement is between you and the developer of Chéri. It covers your use of the iOS app Chéri. By downloading, installing, or continuing to use the app, you agree to this agreement and the <a href="Cheri-privacy-policy.html">Privacy Policy</a>. If you do not agree, stop using the app and delete it.</p>
+
+      <h2>The service</h2>
+      <p>Chéri is a personal journal. You can write about your days, mark a mood, save inspirations, lock an entry, add your own photos, and set local morning or evening reminders. The app does not offer an account, and it does not sync your journal to the developer’s servers.</p>
+      <p>Text and images in the inspirations section are there to read. Some images may be loaded from the internet. Your journal text still stays on your device.</p>
+
+      <h2>License</h2>
+      <p>We grant you a personal, non-transferable, non-exclusive license to use Chéri on an iPhone you own or control. You may not sell, rent, reverse engineer, or bypass the app’s normal operation, except where the law expressly allows it.</p>
+
+      <h2>Your content</h2>
+      <p>The words you write, the photos you choose, and the labels you add remain yours or the original rightsholder’s. You allow the app to process that content on the device so it can be shown, saved, exported, and deleted. We do not take ownership of your journal.</p>
+      <p>You are responsible for having the right to use photos and text you place in an entry, and for deciding what is appropriate to keep or share. When you export through the system share sheet, the recipient receives a copy because of your action.</p>
+
+      <h2>Acceptable use</h2>
+      <p>Use Chéri in a way that is lawful and respectful of other people’s rights. Do not use the app to store or distribute illegal content, or to interfere with the app. A private flag changes how an entry is shown inside the app. It is not a substitute for the device passcode or system encryption.</p>
+
+      <h2>Intellectual property</h2>
+      <p>The app itself, the name Chéri, the icon, and the built-in writing and layout belong to the developer or the relevant rightsholders. This agreement does not transfer those rights to you. Your journal does not become the developer’s property.</p>
+
+      <h2>Disclaimer</h2>
+      <p>Chéri is provided “as is” for personal notes and reading. We do not guarantee that the app will be uninterrupted or error-free, or that it will meet a particular purpose. Inspiration content is for reading only. It is not medical, psychological, legal, or financial advice. Keep your device safe, and export a copy when you want one.</p>
+
+      <h2>Limitation of liability</h2>
+      <p>To the extent permitted by law, the developer is not liable for indirect, incidental, or consequential losses arising from use of or inability to use the app, including loss of journal content caused by device failure, uninstalling, or backup settings. Liability that the law does not allow to be excluded is not excluded here.</p>
+
+      <h2>Ending use</h2>
+      <p>You may stop using Chéri and uninstall it at any time. If you break this agreement, the developer may stop providing updates or support. After you uninstall, local app data is removed in the way iOS removes it. Terms that should survive by their nature remain in effect.</p>
+
+      <h2>Changes</h2>
+      <p>We may update this agreement and change the effective date at the top of this page. Continuing to use the app after an update is posted means you accept the revised agreement. If you do not accept it, stop using the app and uninstall it.</p>
+
+      <h2>Governing law</h2>
+      <p>This agreement is governed by the laws of the People’s Republic of China. Disputes should first be discussed in good faith. If that does not resolve the dispute, it shall be submitted to a people’s court with jurisdiction.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this agreement can be sent to <a href="mailto:support@cheri.app">support@cheri.app</a>.</p>
+    </article>
+
+    <nav>
+      <a href="Cheri-privacy-policy.html" data-lang="zh">隐私政策</a>
+      <a href="Cheri-user-agreement.html" aria-current="page" data-lang="zh">用户协议</a>
+      <a href="Cheri-support.html" data-lang="zh">支持</a>
+      <a href="Cheri-privacy-policy.html" data-lang="en">Privacy Policy</a>
+      <a href="Cheri-user-agreement.html" aria-current="page" data-lang="en">User Agreement</a>
+      <a href="Cheri-support.html" data-lang="en">Support</a>
+    </nav>
+  </div>
+  <script>
+    (function () {
+      var key = "cheri-legal-lang";
+      var titles = { zh: "用户协议 · Chéri", en: "User Agreement · Chéri" };
+      function apply(lang) {
+        var next = lang === "en" ? "en" : "zh";
+        document.documentElement.setAttribute("data-active-lang", next);
+        document.documentElement.lang = next === "zh" ? "zh-Hans" : "en";
+        document.title = titles[next];
+        document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+          btn.setAttribute("aria-pressed", btn.getAttribute("data-set-lang") === next ? "true" : "false");
+        });
+        try { localStorage.setItem(key, next); } catch (e) {}
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+        btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+      });
+      apply(document.documentElement.getAttribute("data-active-lang") || "zh");
+    })();
+  </script>
+</body>
+</html>
