@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-zh="QiRi用户协议" data-en="QiRi User Agreement">QiRi用户协议</title>
+  <meta name="description" content="QiRi用户协议。一本离线的生活小记，内容属于你。">
+  <style>
+    :root {
+      --paper: #f7f1e8;
+      --card: #fffcf8;
+      --ink: #2a2420;
+      --muted: #8c8178;
+      --line: #e6dcd0;
+      --clay: #c4654a;
+      --soft: #f3ebe3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #161311;
+        --card: #241f1b;
+        --ink: #f4efe8;
+        --muted: #b3a79c;
+        --line: #3a332c;
+        --clay: #e08a72;
+        --soft: #2c2623;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Songti SC", "Source Han Serif SC", Georgia, serif;
+      line-height: 1.7;
+    }
+    a { color: var(--clay); }
+    header, main, footer { width: min(720px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 28px 0 8px;
+    }
+    .brand { text-decoration: none; color: inherit; }
+    .brand strong { display: block; font-size: 22px; letter-spacing: 0.08em; }
+    .brand span { display: block; color: var(--muted); font-size: 13px; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+    .lang {
+      display: flex;
+      padding: 3px;
+      background: var(--soft);
+      border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+    .lang button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: 600 13px/1 -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { background: var(--card); color: var(--ink); }
+    main { padding: 12px 0 28px; }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px 28px 12px;
+    }
+    h1 { font-size: 34px; line-height: 1.25; font-weight: 600; margin: 0 0 8px; }
+    .meta { color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; font-size: 14px; margin: 0 0 22px; }
+    h2 { font-size: 20px; margin: 28px 0 8px; }
+    p, li { font-size: 17px; }
+    ul { padding-left: 1.2em; }
+    footer {
+      padding: 4px 0 40px;
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      font-size: 14px;
+    }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    @media (max-width: 640px) {
+      article { padding: 22px 18px 8px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="qiri-support.html">
+      <strong>QiRi</strong>
+    </a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+  <main>
+    <article data-lang="zh">
+      <h1>用户协议</h1>
+      <p class="meta">生效日期：2026年11月26日</p>
+      <p>使用QiRi，即表示你同意本协议。QiRi是给 iPhone 用的离线生活记录，界面为中文，需要 iOS 15 或更高版本，只支持竖屏。</p>
+
+      <h2>QiRi提供什么</h2>
+      <p>你可以记下每天的习惯打卡、一个心情，以及手记。第一次打开会有四个示例习惯：喝水、散步、阅读、早睡。你可以改名、改图标、改颜色、排序或删除，也可以自己添加。应用可以在本机到点提醒你。记事、心情、打卡和本机提醒不需要网络。安装来源会通过 AppsFlyer 联网记录。</p>
+
+      <h2>你的内容属于你</h2>
+      <p>称呼、习惯、打卡、心情和手记都是你的。QiRi只在这台 iPhone 上保存它们，以便你自己查看。开发者不取得这些文字的所有权，也不把它们用于展示、训练或出售。</p>
+
+      <h2>备份由你保管</h2>
+      <p>换手机、卸载或清空记录之前，请先在「我的」里导出备份。备份是一份 JSON 文件。没有这份文件时，卸载应用或点「清空这台手机上的记录」之后，本机内容无法由开发者找回。恢复备份会用文件里的内容覆盖这台手机上的当前记录。</p>
+
+      <h2>提醒</h2>
+      <p>每天提醒默认时间是 21:30，你可以改。系统若不允许通知，提醒不会响。勿扰、专注模式和系统的通知设置会照常生效。</p>
+
+      <h2>请这样使用</h2>
+      <ul>
+        <li>把QiRi当作自己的记录本</li>
+        <li>导出备份后再把文件交给你信任的地方</li>
+        <li>不要用QiRi去干扰他人，或把它改造成破坏别人设备的工具</li>
+      </ul>
+
+      <h2>按现状提供</h2>
+      <p>QiRi按当前版本提供。它会尽量把记录稳妥地写在本机，但不能承诺手机丢失、系统故障或没有备份时仍能恢复。在法律允许的范围内，开发者不对因此失去的本机记录承担责任。</p>
+
+      <h2>App Store</h2>
+      <p>如果你从 App Store 下载QiRi，下载和付款还适用 Apple 的相应条款。Apple 不负责QiRi里的记录内容。</p>
+
+      <h2>协议更新</h2>
+      <p>协议若有改动，会更新本页并写上新的生效日期。继续使用更新后的QiRi，即表示你接受当时页面上的协议。</p>
+    </article>
+
+    <article data-lang="en" hidden>
+      <h1>User Agreement</h1>
+      <p class="meta">Effective date: November 26, 2026</p>
+      <p>Using QiRi means you agree to this page. QiRi is an offline life notebook for iPhone. The interface is in Chinese. It requires iOS 15 or later and stays in portrait.</p>
+
+      <h2>What QiRi does</h2>
+      <p>You can keep daily habit check-ins, one mood, and journal notes. The first launch includes four sample habits: drink water, walk, read, and sleep early. You can rename them, change the symbol and color, reorder them, delete them, or add your own. A reminder can fire on the phone at a time you choose. The notebook, moods, check-ins, and the on-device reminder do not need a network. AppsFlyer uses the network to record where the install came from.</p>
+
+      <h2>Your writing stays yours</h2>
+      <p>Your name, habits, check-ins, moods, and journal entries belong to you. QiRi stores them on this iPhone so you can read them. The developer does not take ownership of that writing and does not use it for display, training, or sale.</p>
+
+      <h2>You keep the backup</h2>
+      <p>Before you change phones, delete the app, or clear records, export a backup from Profile. The backup is a JSON file. Without that file, the developer cannot restore anything after you delete QiRi or choose “清空这台手机上的记录”. Restoring a backup replaces the records currently on the phone.</p>
+
+      <h2>Reminders</h2>
+      <p>The daily reminder starts at 21:30 and you can change it. If iOS has not allowed notifications, it will not fire. Focus, Do Not Disturb, and the system notification settings still apply.</p>
+
+      <h2>How to use it</h2>
+      <ul>
+        <li>Use QiRi as your own notebook</li>
+        <li>Export a backup before you store that file anywhere else</li>
+        <li>Do not use QiRi to interfere with other people, or turn it into a tool that damages someone else’s device</li>
+      </ul>
+
+      <h2>Provided as it is</h2>
+      <p>QiRi is provided as the current version. It writes your records on the device, and it cannot promise to recover them if the phone is lost, the system fails, or no backup was exported. To the extent the law allows, the developer is not liable for records lost that way.</p>
+
+      <h2>App Store</h2>
+      <p>If you download QiRi from the App Store, Apple’s terms also apply to the download and any payment. Apple is not responsible for the records inside QiRi.</p>
+
+      <h2>Updates</h2>
+      <p>If this agreement changes, this page will show a new effective date. Continuing to use an updated QiRi means you accept the agreement then on this page.</p>
+    </article>
+  </main>
+  <footer>
+    <nav>
+      <a href="qiri-privacy-policy.html">隐私政策 · Privacy</a>
+      <a href="qiri-user-agreement.html">用户协议 · Agreement</a>
+      <a href="qiri-support.html">支持 · Support</a>
+    </nav>
+    <p>QiRi</p>
+  </footer>
+  <script>
+    (function () {
+      var key = "qiri-lang";
+      var buttons = document.querySelectorAll(".lang button");
+      var articles = document.querySelectorAll("main article");
+      var title = document.querySelector("title");
+      function preferred() {
+        try {
+          var saved = localStorage.getItem(key);
+          if (saved === "zh" || saved === "en") return saved;
+        } catch (error) {}
+        var language = (navigator.language || "zh").toLowerCase();
+        return language.indexOf("zh") === 0 ? "zh" : "en";
+      }
+      function apply(lang) {
+        document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+        articles.forEach(function (node) {
+          node.hidden = node.getAttribute("data-lang") !== lang;
+        });
+        buttons.forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-lang") === lang ? "true" : "false");
+        });
+        if (title) title.textContent = lang === "zh" ? title.getAttribute("data-zh") : title.getAttribute("data-en");
+      }
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var lang = button.getAttribute("data-lang");
+          try { localStorage.setItem(key, lang); } catch (error) {}
+          apply(lang);
+        });
+      });
+      apply(preferred());
+    })();
+  </script>
+</body>
+</html>

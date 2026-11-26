@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-zh="QiRi支持" data-en="QiRi Support">QiRi支持</title>
+  <meta name="description" content="QiRi使用说明。离线记录习惯、心情和手记，并在本机备份。">
+  <style>
+    :root {
+      --paper: #f7f1e8;
+      --card: #fffcf8;
+      --ink: #2a2420;
+      --muted: #8c8178;
+      --line: #e6dcd0;
+      --clay: #c4654a;
+      --soft: #f3ebe3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --paper: #161311;
+        --card: #241f1b;
+        --ink: #f4efe8;
+        --muted: #b3a79c;
+        --line: #3a332c;
+        --clay: #e08a72;
+        --soft: #2c2623;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Iowan Old Style", Palatino, "Palatino Linotype", "Songti SC", "Source Han Serif SC", Georgia, serif;
+      line-height: 1.7;
+    }
+    a { color: var(--clay); }
+    header, main, footer { width: min(720px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 28px 0 8px;
+    }
+    .brand { text-decoration: none; color: inherit; }
+    .brand strong { display: block; font-size: 22px; letter-spacing: 0.08em; }
+    .brand span { display: block; color: var(--muted); font-size: 13px; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; }
+    .lang {
+      display: flex;
+      padding: 3px;
+      background: var(--soft);
+      border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+    .lang button {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: 600 13px/1 -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      padding: 8px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] { background: var(--card); color: var(--ink); }
+    main { padding: 12px 0 28px; }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px 28px 12px;
+    }
+    h1 { font-size: 34px; line-height: 1.25; font-weight: 600; margin: 0 0 8px; }
+    .meta { color: var(--muted); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif; font-size: 14px; margin: 0 0 22px; }
+    h2 { font-size: 20px; margin: 28px 0 8px; }
+    p, li { font-size: 17px; }
+    ul, ol { padding-left: 1.2em; }
+    footer {
+      padding: 4px 0 40px;
+      color: var(--muted);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      font-size: 14px;
+    }
+    footer nav { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-bottom: 8px; }
+    @media (max-width: 640px) {
+      article { padding: 22px 18px 8px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="qiri-support.html">
+      <strong>QiRi</strong>
+    </a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </header>
+  <main>
+    <article data-lang="zh">
+      <h1>支持</h1>
+      <p class="meta">QiRi是一本离线生活小记。界面是中文，数据留在这台 iPhone 上。</p>
+
+      <h2>四个分页</h2>
+      <ul>
+        <li>今日：称呼、今天的心情、今日习惯打卡、一句引文、今天的手记</li>
+        <li>习惯：添加、编辑、排序和删除习惯。打卡在「今日」</li>
+        <li>手记：按月份查看，可以搜索标题或正文</li>
+        <li>我的：称呼、连续记录、每天提醒、导出和恢复备份、清空记录</li>
+      </ul>
+
+      <h2>记下今天</h2>
+      <ol>
+        <li>第一次打开可以填写称呼，点「就这样」。也可以点「以后再说」，之后在「我的」里保存。</li>
+        <li>心情有五种。再点一次已选中的心情，会取消。</li>
+        <li>习惯右边的圆圈用来打卡。点习惯名称可以看连续天数和最近几周。</li>
+        <li>还没有手记时，今日页往下有「写一句」。已经写过时，可以打开最近一篇，或点「再写一篇」。</li>
+      </ol>
+
+      <h2>习惯</h2>
+      <p>点右上角加号添加习惯。名称最长 20 个字。可以选颜色和图标。左上角「排序」会显示拖动手柄，排完点「完成」。左滑一行可以删除，详情页里也可以编辑或删除。删掉习惯时，它的打卡会一起删掉。</p>
+
+      <h2>手记</h2>
+      <p>标题可以留空，最长 40 个字。正文最长 8000 字。标题和正文都是空的时候不能保存。编辑已有手记时，页内有「删除这篇手记」。</p>
+
+      <h2>提醒</h2>
+      <p>在「我的」打开「每天提醒」。默认时间是 21:30，可以改。第一次打开会向系统申请通知权限。若之前拒绝了，页面上会出现「去系统设置里允许通知」。提醒只在这台手机上响，文案是「留一分钟，看看今天的习惯和心情。」</p>
+
+      <h2>换手机</h2>
+      <ol>
+        <li>在旧手机的「我的」里点「导出备份」，把 JSON 文件存进文件 App，或用隔空投送送到新手机。</li>
+        <li>在新手机安装QiRi，点「从备份恢复」，选中那份文件，再确认替换。</li>
+      </ol>
+      <p>备份需要是QiRi导出的当前版本文件。选错文件时，应用会说明没能读取。</p>
+
+      <h2>清空</h2>
+      <p>「清空这台手机上的记录」会回到最初的四个习惯，并删掉这台手机上的手记、心情和打卡，同时取消提醒。清空前请先导出备份。</p>
+
+      <h2>常见情况</h2>
+      <ul>
+        <li>提醒没响：确认开关已打开，系统设置允许了通知，并且没有被专注模式静音。</li>
+        <li>卸载后记录没了：没有事先导出的备份，开发者无法恢复。</li>
+        <li>需要网络吗：记事本身不需要。安装来源会通过 AppsFlyer 联网记录，习惯、心情和手记不会因此上传。</li>
+      </ul>
+      <p>数据如何保存，见<a href="qiri-privacy-policy.html">隐私政策</a>。使用约定见<a href="qiri-user-agreement.html">用户协议</a>。</p>
+    </article>
+
+    <article data-lang="en" hidden>
+      <h1>Support</h1>
+      <p class="meta">QiRi is an offline daily notebook. The interface is Chinese. Your records stay on this iPhone.</p>
+
+      <h2>Four tabs</h2>
+      <ul>
+        <li>今日 Today: your name, today’s mood, habit check-ins, a short line, and today’s journal</li>
+        <li>习惯 Habits: add, edit, reorder, and delete habits. Check-ins happen on Today</li>
+        <li>手记 Journal: entries grouped by month, with search for title or text</li>
+        <li>我的 Profile: name, streaks, the daily reminder, backup, restore, and clearing records</li>
+      </ul>
+
+      <h2>A day in the app</h2>
+      <ol>
+        <li>On first launch you can enter a name and tap 就这样. 以后再说 dismisses the card. You can save a name later in Profile.</li>
+        <li>There are five moods. Tap the selected mood again to clear it.</li>
+        <li>The circle beside a habit checks it in. Tap the habit name for the streak and the last few weeks.</li>
+        <li>With no journal yet, scroll Today and tap 写一句. After one exists, open the latest entry or tap 再写一篇.</li>
+      </ol>
+
+      <h2>Habits</h2>
+      <p>Use the plus button to add a habit. The name can be 20 characters. Choose a color and a symbol. 排序 shows drag handles; 完成 leaves that mode. Swipe a row to delete, or edit and delete from the habit page. Deleting a habit also deletes its check-ins.</p>
+
+      <h2>Journal</h2>
+      <p>The title can be empty and is limited to 40 characters. The body is limited to 8000 characters. Save stays off while both are empty. An existing entry has 删除这篇手记 on the editing page.</p>
+
+      <h2>Reminder</h2>
+      <p>Turn on 每天提醒 in Profile. The default time is 21:30 and you can change it. The first time, iOS asks for notification permission. If it was denied, the page shows 去系统设置里允许通知. The reminder fires only on this phone and says 「留一分钟，看看今天的习惯和心情。」</p>
+
+      <h2>Moving to a new iPhone</h2>
+      <ol>
+        <li>On the old phone, open Profile and tap 导出备份. Save the JSON file to Files, or AirDrop it to the new phone.</li>
+        <li>Install QiRi on the new phone, tap 从备份恢复, choose that file, and confirm the replacement.</li>
+      </ol>
+      <p>The file needs to be a current QiRi backup. If the file cannot be read, the app says so.</p>
+
+      <h2>Clearing records</h2>
+      <p>清空这台手机上的记录 returns the four original habits and deletes journals, moods, and check-ins on this phone. It also cancels the reminder. Export a backup first if you want to keep them.</p>
+
+      <h2>If something looks wrong</h2>
+      <ul>
+        <li>No reminder: the switch is on, iOS notifications are allowed, and Focus is not silencing them.</li>
+        <li>Records gone after deleting the app: without an exported backup, the developer cannot restore them.</li>
+        <li>Does it need a network: the notebook does not. AppsFlyer contacts the network to record where the install came from. Habits, moods, and notes are not uploaded.</li>
+      </ul>
+      <p>How records are stored is in the <a href="qiri-privacy-policy.html">Privacy Policy</a>. Terms of use are in the <a href="qiri-user-agreement.html">User Agreement</a>.</p>
+    </article>
+  </main>
+  <footer>
+    <nav>
+      <a href="qiri-privacy-policy.html">隐私政策 · Privacy</a>
+      <a href="qiri-user-agreement.html">用户协议 · Agreement</a>
+      <a href="qiri-support.html">支持 · Support</a>
+    </nav>
+    <p>QiRi</p>
+  </footer>
+  <script>
+    (function () {
+      var key = "qiri-lang";
+      var buttons = document.querySelectorAll(".lang button");
+      var articles = document.querySelectorAll("main article");
+      var title = document.querySelector("title");
+      function preferred() {
+        try {
+          var saved = localStorage.getItem(key);
+          if (saved === "zh" || saved === "en") return saved;
+        } catch (error) {}
+        var language = (navigator.language || "zh").toLowerCase();
+        return language.indexOf("zh") === 0 ? "zh" : "en";
+      }
+      function apply(lang) {
+        document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
+        articles.forEach(function (node) {
+          node.hidden = node.getAttribute("data-lang") !== lang;
+        });
+        buttons.forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-lang") === lang ? "true" : "false");
+        });
+        if (title) title.textContent = lang === "zh" ? title.getAttribute("data-zh") : title.getAttribute("data-en");
+      }
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var lang = button.getAttribute("data-lang");
+          try { localStorage.setItem(key, lang); } catch (error) {}
+          apply(lang);
+        });
+      });
+      apply(preferred());
+    })();
+  </script>
+</body>
+</html>
